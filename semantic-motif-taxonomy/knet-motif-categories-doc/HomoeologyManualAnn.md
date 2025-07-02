@@ -1,0 +1,128 @@
+
+
+# Class: Manual Annotation about Homoeology (HomoeologyManualAnn) 
+
+
+_An association that represents a manual annotation based on homoeology._
+
+__
+
+
+
+
+
+URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-categories/HomoeologyManualAnn)
+
+
+
+
+
+
+```mermaid
+ classDiagram
+    class HomoeologyManualAnn
+    click HomoeologyManualAnn href "../HomoeologyManualAnn"
+      ManualAnnotation <|-- HomoeologyManualAnn
+        click ManualAnnotation href "../ManualAnnotation"
+      Homoeology <|-- HomoeologyManualAnn
+        click Homoeology href "../Homoeology"
+      
+      
+```
+
+
+
+
+
+## Inheritance
+* [SemanticMotifCategory](SemanticMotifCategory.md)
+    * [BiologicalTopic](BiologicalTopic.md)
+        * [Phylogeny](Phylogeny.md)
+            * [Homoeology](Homoeology.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+                * **HomoeologyManualAnn** [ [ManualAnnotation](ManualAnnotation.md)]
+
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://knetminer.com/terms/motifs/motif-categories/schema
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | motif:HomoeologyManualAnn |
+| native | motif:HomoeologyManualAnn |
+
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: HomoeologyManualAnn
+description: 'An association that represents a manual annotation based on homoeology.
+
+  '
+title: Manual Annotation about Homoeology
+notes:
+- 'original category: 3.4'
+from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
+is_a: Homoeology
+mixins:
+- ManualAnnotation
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: HomoeologyManualAnn
+description: 'An association that represents a manual annotation based on homoeology.
+
+  '
+title: Manual Annotation about Homoeology
+notes:
+- 'original category: 3.4'
+from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
+is_a: Homoeology
+mixins:
+- ManualAnnotation
+
+```
+</details>
