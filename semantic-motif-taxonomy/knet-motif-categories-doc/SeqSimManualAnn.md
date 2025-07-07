@@ -62,6 +62,13 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::similarity::annotation |
+
+
 
 
 ### Schema Source
@@ -94,13 +101,17 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 <details>
 ```yaml
 name: SeqSimManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::similarity::annotation
 description: 'An association that represents a manual annotation based on sequence
   similarity.
 
   '
 title: Manual Annotation about Sequence Similarity
 notes:
-- 'original category: 4.1'
+- 'original category no: 4.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
@@ -114,13 +125,17 @@ mixins:
 <details>
 ```yaml
 name: SeqSimManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::similarity::annotation
 description: 'An association that represents a manual annotation based on sequence
   similarity.
 
   '
 title: Manual Annotation about Sequence Similarity
 notes:
-- 'original category: 4.1'
+- 'original category no: 4.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:

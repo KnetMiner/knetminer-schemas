@@ -62,6 +62,13 @@ URI: [motif:HomoeologyTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::homoeology::genetics |
+
+
 
 
 ### Schema Source
@@ -94,12 +101,16 @@ URI: [motif:HomoeologyTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 <details>
 ```yaml
 name: HomoeologyTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homoeology::genetics
 description: 'A gene-to-trait association based on homoeology.
 
   '
 title: Gene-to-Trait Association via Homoeology
 notes:
-- 'original category: 3.5'
+- 'original category no: 3.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
@@ -113,12 +124,16 @@ mixins:
 <details>
 ```yaml
 name: HomoeologyTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homoeology::genetics
 description: 'A gene-to-trait association based on homoeology.
 
   '
 title: Gene-to-Trait Association via Homoeology
 notes:
-- 'original category: 3.5'
+- 'original category no: 3.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:

@@ -123,7 +123,7 @@ description: "These paths rely on a multi-step hypothesis that assumes a protein
   \ interaction is \nconserved across species, adding a significant layer of uncertainty.\n"
 title: Association about Homology Interaction
 notes:
-- 'original category: Tier 5'
+- 'original category no: Tier 5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 abstract: true
@@ -144,7 +144,7 @@ description: "These paths rely on a multi-step hypothesis that assumes a protein
   \ interaction is \nconserved across species, adding a significant layer of uncertainty.\n"
 title: Association about Homology Interaction
 notes:
-- 'original category: Tier 5'
+- 'original category no: Tier 5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 abstract: true

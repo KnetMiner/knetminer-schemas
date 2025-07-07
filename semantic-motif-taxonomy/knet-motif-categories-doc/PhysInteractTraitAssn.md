@@ -61,6 +61,13 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | interaction::physical::genetics |
+
+
 
 
 ### Schema Source
@@ -93,12 +100,16 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
 <details>
 ```yaml
 name: PhysInteractTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::genetics
 description: 'A gene-to-trait association based on physical interaction.
 
   '
 title: Gene-to-Trait Association via Physical Interaction
 notes:
-- 'original category: 2.7'
+- 'original category no: 2.7'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
@@ -112,12 +123,16 @@ mixins:
 <details>
 ```yaml
 name: PhysInteractTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::genetics
 description: 'A gene-to-trait association based on physical interaction.
 
   '
 title: Gene-to-Trait Association via Physical Interaction
 notes:
-- 'original category: 2.7'
+- 'original category no: 2.7'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:

@@ -62,6 +62,13 @@ URI: [motif:SeqSimTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::similarity::literature |
+
+
 
 
 ### Schema Source
@@ -94,12 +101,16 @@ URI: [motif:SeqSimTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 <details>
 ```yaml
 name: SeqSimTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::similarity::literature
 description: 'A gene-to-trait association based on sequence similarity.
 
   '
 title: Gene-to-Trait Association via Sequence Similarity
 notes:
-- 'original category: 4.2'
+- 'original category no: 4.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
@@ -113,12 +124,16 @@ mixins:
 <details>
 ```yaml
 name: SeqSimTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::similarity::literature
 description: 'A gene-to-trait association based on sequence similarity.
 
   '
 title: Gene-to-Trait Association via Sequence Similarity
 notes:
-- 'original category: 4.2'
+- 'original category no: 4.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:

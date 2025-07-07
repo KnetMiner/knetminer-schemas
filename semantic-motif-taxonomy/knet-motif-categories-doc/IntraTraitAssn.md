@@ -64,6 +64,13 @@ URI: [motif:IntraTraitAssn](https://knetminer.com/terms/motifs/motif-categories/
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | direct::genetics |
+
+
 
 
 ### Schema Source
@@ -96,6 +103,10 @@ URI: [motif:IntraTraitAssn](https://knetminer.com/terms/motifs/motif-categories/
 <details>
 ```yaml
 name: IntraTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: direct::genetics
 description: 'A gene-trait association that is established with information and methods
   within the same specie
 
@@ -104,7 +115,7 @@ description: 'A gene-trait association that is established with information and 
   '
 title: Intra-specie Gene-Trait Association
 notes:
-- 'original category: 1.2'
+- 'original category no: 1.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Gene2TraitAssociation
 mixins:
@@ -118,6 +129,10 @@ mixins:
 <details>
 ```yaml
 name: IntraTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: direct::genetics
 description: 'A gene-trait association that is established with information and methods
   within the same specie
 
@@ -126,7 +141,7 @@ description: 'A gene-trait association that is established with information and 
   '
 title: Intra-specie Gene-Trait Association
 notes:
-- 'original category: 1.2'
+- 'original category no: 1.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Gene2TraitAssociation
 mixins:

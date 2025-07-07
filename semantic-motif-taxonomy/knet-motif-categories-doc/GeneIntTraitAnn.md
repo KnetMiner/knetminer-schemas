@@ -61,6 +61,13 @@ URI: [motif:GeneIntTraitAnn](https://knetminer.com/terms/motifs/motif-categories
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | interaction::genetic::genetics |
+
+
 
 
 ### Schema Source
@@ -93,12 +100,16 @@ URI: [motif:GeneIntTraitAnn](https://knetminer.com/terms/motifs/motif-categories
 <details>
 ```yaml
 name: GeneIntTraitAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::genetic::genetics
 description: 'A gene-to-trait association based on gene-gene interaction.
 
   '
 title: Gene-to-Trait Association via Gene-Gene Interaction
 notes:
-- 'original category: 2.10'
+- 'original category no: 2.10'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
@@ -112,12 +123,16 @@ mixins:
 <details>
 ```yaml
 name: GeneIntTraitAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::genetic::genetics
 description: 'A gene-to-trait association based on gene-gene interaction.
 
   '
 title: Gene-to-Trait Association via Gene-Gene Interaction
 notes:
-- 'original category: 2.10'
+- 'original category no: 2.10'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:

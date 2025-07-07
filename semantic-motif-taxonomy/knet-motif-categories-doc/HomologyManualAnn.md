@@ -62,6 +62,13 @@ URI: [motif:HomologyManualAnn](https://knetminer.com/terms/motifs/motif-categori
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::homology::annotation |
+
+
 
 
 ### Schema Source
@@ -94,12 +101,16 @@ URI: [motif:HomologyManualAnn](https://knetminer.com/terms/motifs/motif-categori
 <details>
 ```yaml
 name: HomologyManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homology::annotation
 description: 'An association that represents a manual annotation based on homology.
 
   '
 title: Manual Annotation about Homology
 notes:
-- 'original category: 3.1'
+- 'original category no: 3.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
@@ -113,12 +124,16 @@ mixins:
 <details>
 ```yaml
 name: HomologyManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homology::annotation
 description: 'An association that represents a manual annotation based on homology.
 
   '
 title: Manual Annotation about Homology
 notes:
-- 'original category: 3.1'
+- 'original category no: 3.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:

@@ -61,6 +61,13 @@ URI: [motif:CoExpression](https://knetminer.com/terms/motifs/motif-categories/Co
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | expression::coexpression |
+
+
 
 
 ### Schema Source
@@ -93,6 +100,10 @@ URI: [motif:CoExpression](https://knetminer.com/terms/motifs/motif-categories/Co
 <details>
 ```yaml
 name: CoExpression
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::coexpression
 description: 'A gene expression association based on the fact that two (or more genes)
   are similarly expressed
 
@@ -101,7 +112,7 @@ description: 'A gene expression association based on the fact that two (or more 
   '
 title: Association about Co-expression of genes
 notes:
-- 'original category: 2.2'
+- 'original category no: 2.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 
@@ -113,6 +124,10 @@ is_a: GeneExpression
 <details>
 ```yaml
 name: CoExpression
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::coexpression
 description: 'A gene expression association based on the fact that two (or more genes)
   are similarly expressed
 
@@ -121,7 +136,7 @@ description: 'A gene expression association based on the fact that two (or more 
   '
 title: Association about Co-expression of genes
 notes:
-- 'original category: 2.2'
+- 'original category no: 2.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 

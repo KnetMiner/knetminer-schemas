@@ -63,6 +63,13 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | homint::annotation |
+
+
 
 
 ### Schema Source
@@ -95,13 +102,17 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 <details>
 ```yaml
 name: HomIntManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: homint::annotation
 description: 'An association that represents a manual annotation based on homology
   interaction.
 
   '
 title: Manual Annotation about Homology Interaction
 notes:
-- 'original category: 5.1'
+- 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
@@ -115,13 +126,17 @@ mixins:
 <details>
 ```yaml
 name: HomIntManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: homint::annotation
 description: 'An association that represents a manual annotation based on homology
   interaction.
 
   '
 title: Manual Annotation about Homology Interaction
 notes:
-- 'original category: 5.1'
+- 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:

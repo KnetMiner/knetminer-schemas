@@ -128,7 +128,7 @@ description: 'Associations of this type are more speculative than homoeology or 
   '
 title: Sequence Similarity-based Association
 notes:
-- 'original category: Tier 4'
+- 'original category no: Tier 4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true
@@ -155,7 +155,7 @@ description: 'Associations of this type are more speculative than homoeology or 
   '
 title: Sequence Similarity-based Association
 notes:
-- 'original category: Tier 4'
+- 'original category no: Tier 4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true

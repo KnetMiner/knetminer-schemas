@@ -62,6 +62,13 @@ URI: [motif:HomologyTraitAssn](https://knetminer.com/terms/motifs/motif-categori
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::homology::genetics |
+
+
 
 
 ### Schema Source
@@ -94,12 +101,16 @@ URI: [motif:HomologyTraitAssn](https://knetminer.com/terms/motifs/motif-categori
 <details>
 ```yaml
 name: HomologyTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homology::genetics
 description: 'A gene-to-trait association based on homology.
 
   '
 title: Gene-to-Trait Association via homology
 notes:
-- 'original category: 3.2'
+- 'original category no: 3.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
@@ -113,12 +124,16 @@ mixins:
 <details>
 ```yaml
 name: HomologyTraitAssn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homology::genetics
 description: 'A gene-to-trait association based on homology.
 
   '
 title: Gene-to-Trait Association via homology
 notes:
-- 'original category: 3.2'
+- 'original category no: 3.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:

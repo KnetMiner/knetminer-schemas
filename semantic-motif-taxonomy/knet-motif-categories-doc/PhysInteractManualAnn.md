@@ -61,6 +61,13 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | interaction::physical::annotation |
+
+
 
 
 ### Schema Source
@@ -93,13 +100,17 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 <details>
 ```yaml
 name: PhysInteractManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::annotation
 description: 'An association that represents a manual annotation based on physical
   interaction.
 
   '
 title: Manual Annotation about Physical Interaction
 notes:
-- 'original category: 2.6'
+- 'original category no: 2.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
@@ -113,13 +124,17 @@ mixins:
 <details>
 ```yaml
 name: PhysInteractManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::annotation
 description: 'An association that represents a manual annotation based on physical
   interaction.
 
   '
 title: Manual Annotation about Physical Interaction
 notes:
-- 'original category: 2.6'
+- 'original category no: 2.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:

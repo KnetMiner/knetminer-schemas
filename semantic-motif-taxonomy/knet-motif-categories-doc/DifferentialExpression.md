@@ -63,6 +63,13 @@ URI: [motif:DifferentialExpression](https://knetminer.com/terms/motifs/motif-cat
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | expression::differential |
+
+
 
 
 ### Schema Source
@@ -95,6 +102,10 @@ URI: [motif:DifferentialExpression](https://knetminer.com/terms/motifs/motif-cat
 <details>
 ```yaml
 name: DifferentialExpression
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::differential
 description: 'A variant of the `GeneExpression` category, to specifically state that
   an association is based
 
@@ -106,7 +117,7 @@ description: 'A variant of the `GeneExpression` category, to specifically state 
   '
 title: Association based on Differential Gene Expression
 notes:
-- 'original category: 2.1'
+- 'original category no: 2.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 
@@ -118,6 +129,10 @@ is_a: GeneExpression
 <details>
 ```yaml
 name: DifferentialExpression
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::differential
 description: 'A variant of the `GeneExpression` category, to specifically state that
   an association is based
 
@@ -129,7 +144,7 @@ description: 'A variant of the `GeneExpression` category, to specifically state 
   '
 title: Association based on Differential Gene Expression
 notes:
-- 'original category: 2.1'
+- 'original category no: 2.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 

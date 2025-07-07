@@ -61,6 +61,13 @@ URI: [motif:GeneIntTextMining](https://knetminer.com/terms/motifs/motif-categori
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | interaction::genetic::literature |
+
+
 
 
 ### Schema Source
@@ -93,13 +100,17 @@ URI: [motif:GeneIntTextMining](https://knetminer.com/terms/motifs/motif-categori
 <details>
 ```yaml
 name: GeneIntTextMining
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::genetic::literature
 description: 'An association that represents a text mining annotation based on gene-gene
   interaction.
 
   '
 title: Text Mining Annotation about Gene-Gene Interaction
 notes:
-- 'original category: 2.11'
+- 'original category no: 2.11'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
@@ -113,13 +124,17 @@ mixins:
 <details>
 ```yaml
 name: GeneIntTextMining
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::genetic::literature
 description: 'An association that represents a text mining annotation based on gene-gene
   interaction.
 
   '
 title: Text Mining Annotation about Gene-Gene Interaction
 notes:
-- 'original category: 2.11'
+- 'original category no: 2.11'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:

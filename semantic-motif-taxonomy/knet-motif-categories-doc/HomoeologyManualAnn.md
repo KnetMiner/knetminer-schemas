@@ -62,6 +62,13 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | phylogeny::homoeology::annotation |
+
+
 
 
 ### Schema Source
@@ -94,12 +101,16 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 <details>
 ```yaml
 name: HomoeologyManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homoeology::annotation
 description: 'An association that represents a manual annotation based on homoeology.
 
   '
 title: Manual Annotation about Homoeology
 notes:
-- 'original category: 3.4'
+- 'original category no: 3.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
@@ -113,12 +124,16 @@ mixins:
 <details>
 ```yaml
 name: HomoeologyManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: phylogeny::homoeology::annotation
 description: 'An association that represents a manual annotation based on homoeology.
 
   '
 title: Manual Annotation about Homoeology
 notes:
-- 'original category: 3.4'
+- 'original category no: 3.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:

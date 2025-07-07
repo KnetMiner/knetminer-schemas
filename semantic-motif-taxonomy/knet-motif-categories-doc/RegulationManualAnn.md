@@ -62,6 +62,13 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | expression::regulation::annotation |
+
+
 
 
 ### Schema Source
@@ -94,11 +101,15 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 <details>
 ```yaml
 name: RegulationManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::regulation::annotation
 description: "An association that represents a manual annotation based on gene expression\
   \ regulation. \n"
 title: Manual Annotation about Gene Expression Regulation
 notes:
-- 'original category: 2.3'
+- 'original category no: 2.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
@@ -112,11 +123,15 @@ mixins:
 <details>
 ```yaml
 name: RegulationManualAnn
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: expression::regulation::annotation
 description: "An association that represents a manual annotation based on gene expression\
   \ regulation. \n"
 title: Manual Annotation about Gene Expression Regulation
 notes:
-- 'original category: 2.3'
+- 'original category no: 2.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:

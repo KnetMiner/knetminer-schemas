@@ -100,7 +100,7 @@ description: 'An association that represents a text mining annotation based on s
   '
 title: Text Mining Annotation about Sequence Similarity
 notes:
-- 'original category: 4.3'
+- 'original category no: 4.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
@@ -120,7 +120,7 @@ description: 'An association that represents a text mining annotation based on s
   '
 title: Text Mining Annotation about Sequence Similarity
 notes:
-- 'original category: 4.3'
+- 'original category no: 4.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:

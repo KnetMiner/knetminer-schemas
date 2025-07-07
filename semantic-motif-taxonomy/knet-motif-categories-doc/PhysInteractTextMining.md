@@ -61,6 +61,13 @@ URI: [motif:PhysInteractTextMining](https://knetminer.com/terms/motifs/motif-cat
 
 
 
+### Annotations
+
+| property | value |
+| --- | --- |
+| originalCategory | interaction::physical::literature |
+
+
 
 
 ### Schema Source
@@ -93,13 +100,17 @@ URI: [motif:PhysInteractTextMining](https://knetminer.com/terms/motifs/motif-cat
 <details>
 ```yaml
 name: PhysInteractTextMining
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::literature
 description: 'An association that represents a text mining annotation based on physical
   interaction.
 
   '
 title: Text Mining Annotation about Physical Interaction
 notes:
-- 'original category: 2.8'
+- 'original category no: 2.8'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
@@ -113,13 +124,17 @@ mixins:
 <details>
 ```yaml
 name: PhysInteractTextMining
+annotations:
+  originalCategory:
+    tag: originalCategory
+    value: interaction::physical::literature
 description: 'An association that represents a text mining annotation based on physical
   interaction.
 
   '
 title: Text Mining Annotation about Physical Interaction
 notes:
-- 'original category: 2.8'
+- 'original category no: 2.8'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
