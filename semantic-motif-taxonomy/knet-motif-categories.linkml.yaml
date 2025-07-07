@@ -8,9 +8,8 @@ version: 1.0-SNAPSHOT
 notes:
   - |
     The annotations "original category no" and "originalCategory:" refer to the
-    initial Google
-
-    Doc specification from which this file was defined. TODO: to be deleted in future.
+    initial Google Doc specification from which this file was defined. 
+    TODO: to be deleted in future.
 
 prefixes:
   linkml: https://w3id.org/linkml/
