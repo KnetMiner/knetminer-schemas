@@ -1,0 +1,53 @@
+# **KnetMiner Evidence Categories & Tier System**
+
+This system ranks all 25 KnetMiner evidence categories into five tiers of importance for inferring gene function, from the most direct and reliable evidence to the most speculative.
+
+# **Tier 1: Direct Evidence**
+
+**Rationale:** The most reliable tier. Evidence in this category applies directly to the queried gene in its native species, requiring no inference from other organisms.
+
+1. `direct::annotation`: This represents the highest standard of curated knowledge. The gene has been assigned a specific function (e.g., a Gene Ontology term like "magnesium chelatase activity") by expert curators based on direct experimental results. This is considered foundational evidence.  
+2. `direct::genetics`: This provides a causal link between the gene and a trait. It signifies that a genetic study, such as a Genome-Wide Association Study (GWAS), has found a statistically significant association between a variation within the gene and a measurable phenotype (e.g., fruit firmness or disease resistance).  
+3. `direct::literature`: This links the gene directly to a scientific publication where it has been studied. This evidence is typically found using text-mining and indicates that the gene is mentioned in the context of a specific biological process, trait, or experiment.
+
+# **Tier 2: Direct Experimental Evidence (Interaction & Expression)**
+
+**Rationale:** This tier represents strong, direct experimental data about the gene's behaviour, such as its expression patterns or physical interactions. This is considered highly reliable evidence for establishing functional context.
+
+1. `expression::differential`  
+2. `expression::coexpression`  
+3. `expression::regulation::annotation`  
+4. `expression::regulation::genetics`  
+5. `expression::regulation::literature`  
+6. `interaction::physical::annotation`  
+7. `interaction::physical::genetics`  
+8. `interaction::physical::literature`  
+9. `interaction::genetic::annotation`  
+10. `interaction::genetic::genetics`  
+11. `interaction::genetic::literature`
+
+# **Tier 3: High-Confidence Homology-Based Evidence**
+
+**Rationale:** This tier uses the principles of comparative genomics, inferring function from true orthologs (genes with a shared ancestor) or homoeologs (genes related by polyploidy events). This is a standard and powerful method for forming strong hypotheses.
+
+1. `phylogeny::homology::annotation`  
+2. `phylogeny::homology::genetics`  
+3. `phylogeny::homology::literature`  
+4. `phylogeny::homoeology::annotation`  
+5. `phylogeny::homoeology::genetics`  
+6. `phylogeny::homoeology::literature`
+
+# **Tier 4: Weaker Similarity-Based Evidence**
+
+**Rationale:** Evidence in this tier is more speculative because it is based on sequence similarity, which does not guarantee a shared evolutionary origin or function (unlike homology).
+
+1. `phylogeny::similarity::annotation`  
+2. `phylogeny::similarity::literature`
+
+# **Tier 5: Speculative Inferred Interactions (Most Speculative)**
+
+**Rationale:** The least reliable tier for inferring a gene's direct function. These paths rely on a multi-step hypothesis that assumes a protein-protein interaction is conserved across species, adding a significant layer of uncertainty.
+
+1. `homint::annotation`  
+2. `homint::genetics`  
+3. `homint::literature`
