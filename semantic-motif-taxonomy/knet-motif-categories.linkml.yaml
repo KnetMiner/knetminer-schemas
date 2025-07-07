@@ -110,7 +110,7 @@ classes:
     mixins:
       - IntraSpecieAssociation
     notes:
-      - "original category: 1.2"
+      - "original category no: 1.2"
 
   GeneExpression:
     is_a: BiologicalTopic
@@ -130,7 +130,7 @@ classes:
       of differential gene expression analysis, eg, by comparing gene expression in a treatement/control
       experiment.
     notes:
-      - "original category: 2.1"
+      - "original category no: 2.1"
 
   CoExpression:
     is_a: GeneExpression
@@ -139,7 +139,7 @@ classes:
       A gene expression association based on the fact that two (or more genes) are similarly expressed
       under similar conditions.
     notes:
-      - "original category: 2.2"
+      - "original category no: 2.2"
 
   ExpressionRegulation:
     is_a: GeneExpression
@@ -157,7 +157,7 @@ classes:
     mixins: 
       - ManualAnnotation
     notes:
-      - "original category: 2.3"
+      - "original category no: 2.3"
 
   RegulationTraitAssn:
     is_a: ExpressionRegulation
@@ -167,7 +167,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 2.4"
+      - "original category no: 2.4"
 
   RegulationTextMining:
     is_a: ExpressionRegulation
@@ -177,7 +177,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 2.5"
+      - "original category no: 2.5"
     annotations:
       associationStrength: 2.1
 
@@ -197,7 +197,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 2.6"
+      - "original category no: 2.6"
 
   PhysInteractTraitAssn:
     is_a: PhysicalInteraction
@@ -207,7 +207,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 2.7"
+      - "original category no: 2.7"
 
   PhysInteractTextMining:
     is_a: PhysicalInteraction
@@ -217,7 +217,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 2.8"
+      - "original category no: 2.8"
 
   GeneGeneInteraction:
     is_a: BiologicalTopic
@@ -235,7 +235,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 2.9"
+      - "original category no: 2.9"
 
   GeneIntTraitAnn:
     is_a: GeneGeneInteraction
@@ -245,7 +245,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 2.10"
+      - "original category no: 2.10"
 
   GeneIntTextMining:
     is_a: GeneGeneInteraction
@@ -255,7 +255,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 2.11"
+      - "original category no: 2.11"
 
   Phylogeny:
     is_a: BiologicalTopic
@@ -290,7 +290,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 3.4"
+      - "original category no: 3.4"
 
   HomoeologyTraitAssn:
     is_a: Homoeology
@@ -300,7 +300,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 3.5"
+      - "original category no: 3.5"
 
   HomoeologyTextMining:
     is_a: Homoeology
@@ -310,7 +310,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 3.6"
+      - "original category no: 3.6"
     annotations:
       associationStrength: 3.2
 
@@ -336,7 +336,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 3.1"
+      - "original category no: 3.1"
 
   HomologyTraitAssn:
     is_a: Homology
@@ -346,7 +346,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 3.2"
+      - "original category no: 3.2"
 
   HomologyTextMining:
     is_a: Homology
@@ -356,7 +356,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 3.3"
+      - "original category no: 3.3"
     annotations:
       associationStrength: 3.3
 
@@ -368,7 +368,7 @@ classes:
       conserved across species, adding a significant layer of uncertainty.
     abstract: true
     notes:
-      - "original category: Tier 5"
+      - "original category no: Tier 5"
     annotations:
       associationStrength: 5
 
@@ -380,7 +380,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 5.1"
+      - "original category no: 5.1"
 
   HomIntTraitAssn:
     is_a: HomologyInteraction
@@ -390,7 +390,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 5.2"
+      - "original category no: 5.2"
 
   HomIntTextMining:
     is_a: HomologyInteraction
@@ -400,7 +400,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 5.3"
+      - "original category no: 5.3"
 
   SequenceSimilarity:
     is_a: Phylogeny
@@ -412,7 +412,7 @@ classes:
     mixins:
       - AssociationStrength
     notes:
-      - "original category: Tier 4"
+      - "original category no: Tier 4"
     annotations:
       associationStrength: 4
 
@@ -425,7 +425,7 @@ classes:
     mixins:
       - ManualAnnotation
     notes:
-      - "original category: 4.1"
+      - "original category no: 4.1"
 
   SeqSimTraitAssn:
     is_a: SequenceSimilarity
@@ -435,7 +435,7 @@ classes:
     mixins:
       - Gene2TraitAssociation
     notes:
-      - "original category: 4.2"
+      - "original category no: 4.2"
 
   SeqSimTextMining:
     is_a: SequenceSimilarity
@@ -445,7 +445,7 @@ classes:
     mixins:
       - TextMiningAnnotation
     notes:
-      - "original category: 4.3"
+      - "original category no: 4.3"
 
   AnnotationMethod:
     is_a: SemanticMotifCategory
