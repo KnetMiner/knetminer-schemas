@@ -5,6 +5,13 @@ description: |
   gene/concept links that are found by semantic motif paths and anything similar or related to that.
 version: 1.0-SNAPSHOT
 
+notes:
+  - |
+    The annotations "original category no" and "originalCategory:" refer to the
+    initial Google
+
+    Doc specification from which this file was defined. TODO: to be deleted in future.
+
 prefixes:
   linkml: https://w3id.org/linkml/
   motif: https://knetminer.com/terms/motifs/motif-categories/
