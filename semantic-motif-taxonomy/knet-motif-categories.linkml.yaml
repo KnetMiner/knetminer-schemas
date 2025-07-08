@@ -167,7 +167,7 @@ classes:
     description: |
       An association that represents a manual annotation based on gene expression regulation. 
     mixins: 
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 2.3"
     annotations:
@@ -191,7 +191,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on gene expression regulation.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 2.5"
     annotations:
@@ -212,7 +212,7 @@ classes:
     description: |
       An association that represents a manual annotation based on physical interaction.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 2.6"
     annotations:
@@ -236,7 +236,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on physical interaction.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 2.8"
     annotations:
@@ -256,7 +256,7 @@ classes:
     description: |
       An association that represents a manual annotation based on gene-gene interaction.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 2.9"
     annotations:
@@ -280,7 +280,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on gene-gene interaction.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 2.11"
     annotations:
@@ -317,7 +317,7 @@ classes:
     description: |
       An association that represents a manual annotation based on homoeology.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 3.4"
     annotations:
@@ -341,7 +341,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on homoeology.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 3.6"
     annotations:
@@ -368,7 +368,7 @@ classes:
     description: |
       An association that represents a manual annotation based on homology.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 3.1"
     annotations:
@@ -392,7 +392,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on homology.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 3.3"
     annotations:
@@ -417,7 +417,7 @@ classes:
     description: |
       An association that represents a manual annotation based on homology interaction.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 5.1"
     annotations:
@@ -441,7 +441,7 @@ classes:
     description: |
       An association that represents a text mining annotation based on homology interaction.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
       - "original category no: 5.3"
     annotations:
@@ -468,23 +468,11 @@ classes:
     description: |
       An association that represents a manual annotation based on sequence similarity.
     mixins:
-      - ManualAnnotation
+      - ManualAnnotationMethod
     notes:
       - "original category no: 4.1"
     annotations:
       originalCategory: "phylogeny::similarity::annotation"
-
-  SeqSimTraitAssn:
-    is_a: SequenceSimilarity
-    title: Gene-to-Trait Association via Sequence Similarity
-    description: |
-      A gene-to-trait association based on sequence similarity.
-    mixins:
-      - Gene2TraitAssociation
-    notes:
-      - "original category no: 4.2"
-    annotations:
-      originalCategory: "phylogeny::similarity::literature"
 
   SeqSimTextMining:
     is_a: SequenceSimilarity
@@ -492,9 +480,11 @@ classes:
     description: |
       An association that represents a text mining annotation based on sequence similarity.
     mixins:
-      - TextMiningAnnotation
+      - TextMiningAnnotationMethod
     notes:
-      - "original category no: 4.3"
+      - "original category no: 4.2"
+    annotations:
+      originalCategory: "phylogeny::similarity::literature"
 
   AnnotationMethod:
     is_a: SemanticMotifCategory
@@ -504,13 +494,45 @@ classes:
       method used to establish the association, such as manual annotation or text mining.
     abstract: true
   
+  ManualAnnotationMethod:
+    is_a: AnnotationMethod
+    title: Manual Annotation Method
+    description: |
+      An association category that represents a manual annotation, provided by a curator or expert.
+
+      Note that this is the abstract category used to derive concrete/instantiantable categories
+      that imply the use of this annotation method. Use `ManualAnnotation` to associate a semantic 
+      motif to a manual annotation.
+    abstract: true
+    mixin: true
+
   ManualAnnotation:
     is_a: AnnotationMethod
     title: Manual Annotation
     description: |
-      An association that represents a manual annotation, provided by a curator or expert.
+      An association category that represents a manual annotation, provided by a curator or expert.
+    abstract: true
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 1.1"
+    annotations:
+      originalCategory: "direct::annotation"
+
+  TextMiningAnnotationMethod:
+    is_a: AnnotationMethod
+    title: Text Mining Annotation Method
+    description: |
+      An association that was computed via text mining methods, such as name-entity recognition,
+      semantic similarity or LLM-based embeddings.
+
+      Note that this is the abstract category used to derive concrete/instantiantable categories
+      that imply the use of this annotation method. Use `TextMiningAnnotation` to associate a 
+      semantic motif to a text mining annotation.
     abstract: true
     mixin: true
+    mixins:
+      - ComputationallyInferredAssociation
 
   TextMiningAnnotation:
     is_a: AnnotationMethod
@@ -518,7 +540,9 @@ classes:
     description: |
       An association that was computed via text mining methods, such as name-entity recognition,
       semantic similarity or LLM-based embeddings.
-    abstract: true
-    mixin: true
     mixins:
-      - ComputationallyInferredAssociation
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 1.2"
+    annotations:
+      originalCategory: "direct::literature"
