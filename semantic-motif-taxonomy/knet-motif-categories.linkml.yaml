@@ -55,9 +55,9 @@ classes:
 
   CrossSpecieAssociation:
     is_a: AssociationStrength
-    title: Intra-Specie Association
+    title: Cross-Specie Association
     description: |
-      Associations in this category are obtained by comparing information in multiple species, eg,
+      Associations in this category are obtained by comparing information across species, eg,
       via homology or sequence similarity.    
     abstract: true
     mixin: true  
@@ -112,7 +112,7 @@ classes:
     title: Intra-specie Gene-Trait Association
     description: |
       A gene-trait association that is established with information and methods within the same specie
-      as the association target gene.
+      as the association target gene (eg through GWAS experiments).
     mixins:
       - IntraSpecieAssociation
     notes:
@@ -413,9 +413,9 @@ classes:
 
   HomIntManualAnn:
     is_a: HomologyInteraction
-    title: Manual Annotation about Homology Interaction
+    title: Manual Annotation via homology and interaction
     description: |
-      An association that represents a manual annotation based on homology interaction.
+      An association that represents a manual annotation based on homology and interaction.
     mixins:
       - ManualAnnotationMethod
     notes:
@@ -425,7 +425,7 @@ classes:
 
   HomIntTraitAssn:
     is_a: HomologyInteraction
-    title: Gene-to-Trait Association via homology
+    title: Gene-to-Trait Association via homology and interaction
     description: |
       A gene-to-trait association based on homology.
     mixins:
@@ -437,9 +437,9 @@ classes:
 
   HomIntTextMining:
     is_a: HomologyInteraction
-    title: Text Mining Annotation about Homology Interaction
+    title: Text Mining Annotation via homology and interaction
     description: |
-      An association that represents a text mining annotation based on homology interaction.
+      An association that represents a text mining annotation based on homology and interaction.
     mixins:
       - TextMiningAnnotationMethod
     notes:
