@@ -26,8 +26,8 @@ URI: [motif:GeneExpression](https://knetminer.com/terms/motifs/motif-categories/
  classDiagram
     class GeneExpression
     click GeneExpression href "../GeneExpression"
-      IntraSpecieAssociation <|-- GeneExpression
-        click IntraSpecieAssociation href "../IntraSpecieAssociation"
+      IntraSpeciesAssociation <|-- GeneExpression
+        click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
       BiologicalTopic <|-- GeneExpression
         click BiologicalTopic href "../BiologicalTopic"
       
@@ -50,7 +50,7 @@ URI: [motif:GeneExpression](https://knetminer.com/terms/motifs/motif-categories/
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
-        * **GeneExpression** [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+        * **GeneExpression** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
             * [DifferentialExpression](DifferentialExpression.md)
             * [CoExpression](CoExpression.md)
             * [ExpressionRegulation](ExpressionRegulation.md)
@@ -119,7 +119,7 @@ from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: BiologicalTopic
 abstract: true
 mixins:
-- IntraSpecieAssociation
+- IntraSpeciesAssociation
 
 ```
 </details>
@@ -140,7 +140,7 @@ from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: BiologicalTopic
 abstract: true
 mixins:
-- IntraSpecieAssociation
+- IntraSpeciesAssociation
 
 ```
 </details>

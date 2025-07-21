@@ -60,7 +60,7 @@ URI: [motif:Gene2TraitAssociation](https://knetminer.com/terms/motifs/motif-cate
     * [BiologicalTopic](BiologicalTopic.md)
         * [Gene2PhenotypeAssociation](Gene2PhenotypeAssociation.md)
             * **Gene2TraitAssociation**
-                * [IntraTraitAssn](IntraTraitAssn.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+                * [IntraTraitAssn](IntraTraitAssn.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
 
 
 

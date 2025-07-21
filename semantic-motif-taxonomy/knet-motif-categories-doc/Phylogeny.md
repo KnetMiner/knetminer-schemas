@@ -49,8 +49,8 @@ URI: [motif:Phylogeny](https://knetminer.com/terms/motifs/motif-categories/Phylo
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * **Phylogeny**
-            * [Homoeology](Homoeology.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
-            * [Homology](Homology.md) [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
             * [SequenceSimilarity](SequenceSimilarity.md) [ [AssociationStrength](AssociationStrength.md)]
 
 

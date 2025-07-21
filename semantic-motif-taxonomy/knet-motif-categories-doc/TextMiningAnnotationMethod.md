@@ -88,7 +88,7 @@ URI: [motif:TextMiningAnnotationMethod](https://knetminer.com/terms/motifs/motif
 | [GeneIntTextMining](GeneIntTextMining.md) | An association that represents a text mining annotation based on gene-gene in... |
 | [HomoeologyTextMining](HomoeologyTextMining.md) | An association that represents a text mining annotation based on homoeology |
 | [HomologyTextMining](HomologyTextMining.md) | An association that represents a text mining annotation based on homology |
-| [HomIntTextMining](HomIntTextMining.md) | An association that represents a text mining annotation based on homology int... |
+| [HomIntTextMining](HomIntTextMining.md) | An association that represents a text mining annotation based on homology and... |
 | [SeqSimTextMining](SeqSimTextMining.md) | An association that represents a text mining annotation based on sequence sim... |
 | [TextMiningAnnotation](TextMiningAnnotation.md) | An association that was computed via text mining methods, such as name-entity... |
 

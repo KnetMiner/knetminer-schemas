@@ -15,7 +15,7 @@ _different species._
 
 __
 
-_Based on the meaning of the term, this class is made a subclass of 'IntraSpecieAssociation'._
+_Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'._
 
 __
 
@@ -36,8 +36,8 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
  classDiagram
     class Homoeology
     click Homoeology href "../Homoeology"
-      IntraSpecieAssociation <|-- Homoeology
-        click IntraSpecieAssociation href "../IntraSpecieAssociation"
+      IntraSpeciesAssociation <|-- Homoeology
+        click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
       Phylogeny <|-- Homoeology
         click Phylogeny href "../Phylogeny"
       
@@ -61,7 +61,7 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * **Homoeology** [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+            * **Homoeology** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
                 * [HomoeologyManualAnn](HomoeologyManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
                 * [HomoeologyTraitAssn](HomoeologyTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
                 * [HomoeologyTextMining](HomoeologyTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
@@ -134,13 +134,13 @@ description: "Associations related to homoeology. Homoeologs are pairs of genes 
   \ originated by speciation \nand were brought back together in the same genome by\
   \ allopolyploidization (PMC4920642).\n\nAllopolyploidization is the formation of\
   \ new species through the combination of chromosomes from\ndifferent species.\n\n\
-  Based on the meaning of the term, this class is made a subclass of 'IntraSpecieAssociation'.\n"
+  Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.\n"
 title: Homoeology-related Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true
 mixins:
-- IntraSpecieAssociation
+- IntraSpeciesAssociation
 
 ```
 </details>
@@ -158,13 +158,13 @@ description: "Associations related to homoeology. Homoeologs are pairs of genes 
   \ originated by speciation \nand were brought back together in the same genome by\
   \ allopolyploidization (PMC4920642).\n\nAllopolyploidization is the formation of\
   \ new species through the combination of chromosomes from\ndifferent species.\n\n\
-  Based on the meaning of the term, this class is made a subclass of 'IntraSpecieAssociation'.\n"
+  Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.\n"
 title: Homoeology-related Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true
 mixins:
-- IntraSpecieAssociation
+- IntraSpeciesAssociation
 
 ```
 </details>

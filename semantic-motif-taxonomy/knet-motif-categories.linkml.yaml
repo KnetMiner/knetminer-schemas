@@ -42,20 +42,20 @@ classes:
       of an ancestor that defines it, and of course it can be overriden by the subclasses.
     abstract: true
 
-  IntraSpecieAssociation:
+  IntraSpeciesAssociation:
     is_a: AssociationStrength
-    title: Intra-Specie Association
+    title: Intra-Species Association
     description: |
-      Associations in this category are based on the same specie of the gene that is considered, contrary
+      Associations in this category are based on the same species of the gene that is considered, contrary
       to, eg, homology or sequence similarity.
     abstract: true
     mixin: true
     annotations:
       associationStrength: 1
 
-  CrossSpecieAssociation:
+  CrossSpeciesAssociation:
     is_a: AssociationStrength
-    title: Cross-Specie Association
+    title: Cross-Species Association
     description: |
       Associations in this category are obtained by comparing information across species, eg,
       via homology or sequence similarity.    
@@ -109,12 +109,12 @@ classes:
 
   IntraTraitAssn:
     is_a: Gene2TraitAssociation
-    title: Intra-specie Gene-Trait Association
+    title: Intra-species Gene-Trait Association
     description: |
-      A gene-trait association that is established with information and methods within the same specie
+      A gene-trait association that is established with information and methods within the same species
       as the association target gene (eg through GWAS experiments).
     mixins:
-      - IntraSpecieAssociation
+      - IntraSpeciesAssociation
     notes:
       - "original category no: 1.2"
     annotations:
@@ -128,7 +128,7 @@ classes:
       to predict the function of a gene.
     abstract: true
     mixins:
-      - IntraSpecieAssociation
+      - IntraSpeciesAssociation
   
   DifferentialExpression:
     is_a: GeneExpression
@@ -304,10 +304,10 @@ classes:
       Allopolyploidization is the formation of new species through the combination of chromosomes from
       different species.
 
-      Based on the meaning of the term, this class is made a subclass of 'IntraSpecieAssociation'.
+      Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.
     abstract: true
     mixins:
-      - IntraSpecieAssociation
+      - IntraSpeciesAssociation
     annotations:
       associationStrength: 3.1
 
@@ -353,12 +353,12 @@ classes:
     is_a: Phylogeny
     title: Homology-related Association
     description: |
-      Associations related to homology, that it, cross-specie gene similarity resulting from 
+      Associations related to homology, that it, cross-species gene similarity resulting from 
       shared ancestry.
-      Based on the meaning of this term, this class is made a subclass of 'CrossSpecieAssociation'.
+      Based on the meaning of this term, this class is made a subclass of 'CrossSpeciesAssociation'.
     abstract: true
     mixins:
-      - CrossSpecieAssociation
+      - CrossSpeciesAssociation
     annotations:
       associationStrength: 3.2
     

@@ -48,7 +48,7 @@ URI: [motif:ExpressionRegulation](https://knetminer.com/terms/motifs/motif-categ
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
             * **ExpressionRegulation**
                 * [RegulationManualAnn](RegulationManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
                 * [RegulationTraitAssn](RegulationTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]

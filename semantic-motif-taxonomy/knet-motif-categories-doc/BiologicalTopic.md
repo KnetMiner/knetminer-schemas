@@ -53,7 +53,7 @@ URI: [motif:BiologicalTopic](https://knetminer.com/terms/motifs/motif-categories
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * **BiologicalTopic**
         * [Gene2PhenotypeAssociation](Gene2PhenotypeAssociation.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
         * [PhysicalInteraction](PhysicalInteraction.md)
         * [GeneGeneInteraction](GeneGeneInteraction.md)
         * [Phylogeny](Phylogeny.md)

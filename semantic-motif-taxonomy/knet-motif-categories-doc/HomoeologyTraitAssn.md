@@ -38,7 +38,7 @@ URI: [motif:HomoeologyTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * [Homoeology](Homoeology.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+            * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
                 * **HomoeologyTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
 
 

@@ -84,7 +84,7 @@ URI: [motif:ManualAnnotationMethod](https://knetminer.com/terms/motifs/motif-cat
 | [GeneIntManualAnn](GeneIntManualAnn.md) | An association that represents a manual annotation based on gene-gene interac... |
 | [HomoeologyManualAnn](HomoeologyManualAnn.md) | An association that represents a manual annotation based on homoeology |
 | [HomologyManualAnn](HomologyManualAnn.md) | An association that represents a manual annotation based on homology |
-| [HomIntManualAnn](HomIntManualAnn.md) | An association that represents a manual annotation based on homology interact... |
+| [HomIntManualAnn](HomIntManualAnn.md) | An association that represents a manual annotation based on homology and inte... |
 | [SeqSimManualAnn](SeqSimManualAnn.md) | An association that represents a manual annotation based on sequence similari... |
 | [ManualAnnotation](ManualAnnotation.md) | An association category that represents a manual annotation, provided by a cu... |
 

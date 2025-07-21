@@ -49,7 +49,7 @@ URI: [motif:HomologyInteraction](https://knetminer.com/terms/motifs/motif-catego
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
                 * **HomologyInteraction**
                     * [HomIntManualAnn](HomIntManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
                     * [HomIntTraitAssn](HomIntTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]

@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via homology (HomIntTraitAssn) 
+# Class: Gene-to-Trait Association via homology and interaction (HomIntTraitAssn) 
 
 
 _A gene-to-trait association based on homology._
@@ -38,7 +38,7 @@ URI: [motif:HomIntTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
                 * [HomologyInteraction](HomologyInteraction.md)
                     * **HomIntTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
 
@@ -109,7 +109,7 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology
+title: Gene-to-Trait Association via homology and interaction
 notes:
 - 'original category no: 5.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
@@ -132,7 +132,7 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology
+title: Gene-to-Trait Association via homology and interaction
 notes:
 - 'original category no: 5.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema

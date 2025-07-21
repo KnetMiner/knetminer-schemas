@@ -1,9 +1,9 @@
 
 
-# Class: Manual Annotation about Homology Interaction (HomIntManualAnn) 
+# Class: Manual Annotation via homology and interaction (HomIntManualAnn) 
 
 
-_An association that represents a manual annotation based on homology interaction._
+_An association that represents a manual annotation based on homology and interaction._
 
 __
 
@@ -38,7 +38,7 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
                 * [HomologyInteraction](HomologyInteraction.md)
                     * **HomIntManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
 
@@ -107,10 +107,10 @@ annotations:
     tag: originalCategory
     value: homint::annotation
 description: 'An association that represents a manual annotation based on homology
-  interaction.
+  and interaction.
 
   '
-title: Manual Annotation about Homology Interaction
+title: Manual Annotation via homology and interaction
 notes:
 - 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
@@ -131,10 +131,10 @@ annotations:
     tag: originalCategory
     value: homint::annotation
 description: 'An association that represents a manual annotation based on homology
-  interaction.
+  and interaction.
 
   '
-title: Manual Annotation about Homology Interaction
+title: Manual Annotation via homology and interaction
 notes:
 - 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema

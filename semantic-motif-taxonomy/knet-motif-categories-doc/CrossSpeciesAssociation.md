@@ -1,9 +1,9 @@
 
 
-# Class: Intra-Specie Association (CrossSpecieAssociation) 
+# Class: Cross-Species Association (CrossSpeciesAssociation) 
 
 
-_Associations in this category are obtained by comparing information in multiple species, eg,_
+_Associations in this category are obtained by comparing information across species, eg,_
 
 _via homology or sequence similarity.    _
 
@@ -15,7 +15,7 @@ __
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-categories/CrossSpecieAssociation)
+URI: [motif:CrossSpeciesAssociation](https://knetminer.com/terms/motifs/motif-categories/CrossSpeciesAssociation)
 
 
 
@@ -24,13 +24,13 @@ URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 ```mermaid
  classDiagram
-    class CrossSpecieAssociation
-    click CrossSpecieAssociation href "../CrossSpecieAssociation"
-      AssociationStrength <|-- CrossSpecieAssociation
+    class CrossSpeciesAssociation
+    click CrossSpeciesAssociation href "../CrossSpeciesAssociation"
+      AssociationStrength <|-- CrossSpeciesAssociation
         click AssociationStrength href "../AssociationStrength"
       
 
-      CrossSpecieAssociation <|-- Homology
+      CrossSpeciesAssociation <|-- Homology
         click Homology href "../Homology"
       
       
@@ -44,7 +44,7 @@ URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [AssociationStrength](AssociationStrength.md)
-        * **CrossSpecieAssociation**
+        * **CrossSpeciesAssociation**
 
 
 
@@ -59,7 +59,7 @@ URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 | mixed into | description |
 | --- | --- |
-| [Homology](Homology.md) | Associations related to homology, that it, cross-specie gene similarity resul... |
+| [Homology](Homology.md) | Associations related to homology, that it, cross-species gene similarity resu... |
 
 
 
@@ -95,8 +95,8 @@ URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:CrossSpecieAssociation |
-| native | motif:CrossSpecieAssociation |
+| self | motif:CrossSpeciesAssociation |
+| native | motif:CrossSpeciesAssociation |
 
 
 
@@ -112,14 +112,14 @@ URI: [motif:CrossSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 <details>
 ```yaml
-name: CrossSpecieAssociation
+name: CrossSpeciesAssociation
 annotations:
   associationStrength:
     tag: associationStrength
     value: 2
 description: "Associations in this category are obtained by comparing information\
-  \ in multiple species, eg,\nvia homology or sequence similarity.    \n"
-title: Intra-Specie Association
+  \ across species, eg,\nvia homology or sequence similarity.    \n"
+title: Cross-Species Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: AssociationStrength
 abstract: true
@@ -132,14 +132,14 @@ mixin: true
 
 <details>
 ```yaml
-name: CrossSpecieAssociation
+name: CrossSpeciesAssociation
 annotations:
   associationStrength:
     tag: associationStrength
     value: 2
 description: "Associations in this category are obtained by comparing information\
-  \ in multiple species, eg,\nvia homology or sequence similarity.    \n"
-title: Intra-Specie Association
+  \ across species, eg,\nvia homology or sequence similarity.    \n"
+title: Cross-Species Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: AssociationStrength
 abstract: true

@@ -37,7 +37,7 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpecieAssociation](IntraSpecieAssociation.md)]
+        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
             * [ExpressionRegulation](ExpressionRegulation.md)
                 * **RegulationTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
 

@@ -3,11 +3,11 @@
 # Class: Homology-related Association (Homology) 
 
 
-_Associations related to homology, that it, cross-specie gene similarity resulting from _
+_Associations related to homology, that it, cross-species gene similarity resulting from _
 
 _shared ancestry._
 
-_Based on the meaning of this term, this class is made a subclass of 'CrossSpecieAssociation'._
+_Based on the meaning of this term, this class is made a subclass of 'CrossSpeciesAssociation'._
 
 __
 
@@ -28,8 +28,8 @@ URI: [motif:Homology](https://knetminer.com/terms/motifs/motif-categories/Homolo
  classDiagram
     class Homology
     click Homology href "../Homology"
-      CrossSpecieAssociation <|-- Homology
-        click CrossSpecieAssociation href "../CrossSpecieAssociation"
+      CrossSpeciesAssociation <|-- Homology
+        click CrossSpeciesAssociation href "../CrossSpeciesAssociation"
       Phylogeny <|-- Homology
         click Phylogeny href "../Phylogeny"
       
@@ -55,7 +55,7 @@ URI: [motif:Homology](https://knetminer.com/terms/motifs/motif-categories/Homolo
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * **Homology** [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * **Homology** [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
                 * [HomologyManualAnn](HomologyManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
                 * [HomologyTraitAssn](HomologyTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
                 * [HomologyTextMining](HomologyTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
@@ -125,15 +125,15 @@ annotations:
   associationStrength:
     tag: associationStrength
     value: 3.2
-description: "Associations related to homology, that it, cross-specie gene similarity\
+description: "Associations related to homology, that it, cross-species gene similarity\
   \ resulting from \nshared ancestry.\nBased on the meaning of this term, this class\
-  \ is made a subclass of 'CrossSpecieAssociation'.\n"
+  \ is made a subclass of 'CrossSpeciesAssociation'.\n"
 title: Homology-related Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true
 mixins:
-- CrossSpecieAssociation
+- CrossSpeciesAssociation
 
 ```
 </details>
@@ -147,15 +147,15 @@ annotations:
   associationStrength:
     tag: associationStrength
     value: 3.2
-description: "Associations related to homology, that it, cross-specie gene similarity\
+description: "Associations related to homology, that it, cross-species gene similarity\
   \ resulting from \nshared ancestry.\nBased on the meaning of this term, this class\
-  \ is made a subclass of 'CrossSpecieAssociation'.\n"
+  \ is made a subclass of 'CrossSpeciesAssociation'.\n"
 title: Homology-related Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Phylogeny
 abstract: true
 mixins:
-- CrossSpecieAssociation
+- CrossSpeciesAssociation
 
 ```
 </details>

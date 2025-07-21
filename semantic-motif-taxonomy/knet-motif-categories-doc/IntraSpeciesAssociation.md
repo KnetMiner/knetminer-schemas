@@ -1,9 +1,9 @@
 
 
-# Class: Intra-Specie Association (IntraSpecieAssociation) 
+# Class: Intra-Species Association (IntraSpeciesAssociation) 
 
 
-_Associations in this category are based on the same specie of the gene that is considered, contrary_
+_Associations in this category are based on the same species of the gene that is considered, contrary_
 
 _to, eg, homology or sequence similarity._
 
@@ -15,7 +15,7 @@ __
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [motif:IntraSpecieAssociation](https://knetminer.com/terms/motifs/motif-categories/IntraSpecieAssociation)
+URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-categories/IntraSpeciesAssociation)
 
 
 
@@ -24,17 +24,17 @@ URI: [motif:IntraSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 ```mermaid
  classDiagram
-    class IntraSpecieAssociation
-    click IntraSpecieAssociation href "../IntraSpecieAssociation"
-      AssociationStrength <|-- IntraSpecieAssociation
+    class IntraSpeciesAssociation
+    click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
+      AssociationStrength <|-- IntraSpeciesAssociation
         click AssociationStrength href "../AssociationStrength"
       
 
-      IntraSpecieAssociation <|-- IntraTraitAssn
+      IntraSpeciesAssociation <|-- IntraTraitAssn
         click IntraTraitAssn href "../IntraTraitAssn"
-      IntraSpecieAssociation <|-- GeneExpression
+      IntraSpeciesAssociation <|-- GeneExpression
         click GeneExpression href "../GeneExpression"
-      IntraSpecieAssociation <|-- Homoeology
+      IntraSpeciesAssociation <|-- Homoeology
         click Homoeology href "../Homoeology"
       
       
@@ -48,7 +48,7 @@ URI: [motif:IntraSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [AssociationStrength](AssociationStrength.md)
-        * **IntraSpecieAssociation**
+        * **IntraSpeciesAssociation**
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:IntraSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:IntraSpecieAssociation |
-| native | motif:IntraSpecieAssociation |
+| self | motif:IntraSpeciesAssociation |
+| native | motif:IntraSpeciesAssociation |
 
 
 
@@ -118,18 +118,18 @@ URI: [motif:IntraSpecieAssociation](https://knetminer.com/terms/motifs/motif-cat
 
 <details>
 ```yaml
-name: IntraSpecieAssociation
+name: IntraSpeciesAssociation
 annotations:
   associationStrength:
     tag: associationStrength
     value: 1
-description: 'Associations in this category are based on the same specie of the gene
+description: 'Associations in this category are based on the same species of the gene
   that is considered, contrary
 
   to, eg, homology or sequence similarity.
 
   '
-title: Intra-Specie Association
+title: Intra-Species Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: AssociationStrength
 abstract: true
@@ -142,18 +142,18 @@ mixin: true
 
 <details>
 ```yaml
-name: IntraSpecieAssociation
+name: IntraSpeciesAssociation
 annotations:
   associationStrength:
     tag: associationStrength
     value: 1
-description: 'Associations in this category are based on the same specie of the gene
+description: 'Associations in this category are based on the same species of the gene
   that is considered, contrary
 
   to, eg, homology or sequence similarity.
 
   '
-title: Intra-Specie Association
+title: Intra-Species Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: AssociationStrength
 abstract: true

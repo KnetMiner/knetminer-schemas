@@ -38,7 +38,7 @@ URI: [motif:HomologyTextMining](https://knetminer.com/terms/motifs/motif-categor
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [BiologicalTopic](BiologicalTopic.md)
         * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpecieAssociation](CrossSpecieAssociation.md)]
+            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
                 * **HomologyTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
 
 

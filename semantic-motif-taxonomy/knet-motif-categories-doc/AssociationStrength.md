@@ -38,10 +38,10 @@ URI: [motif:AssociationStrength](https://knetminer.com/terms/motifs/motif-catego
         click SemanticMotifCategory href "../SemanticMotifCategory"
       
 
-      AssociationStrength <|-- IntraSpecieAssociation
-        click IntraSpecieAssociation href "../IntraSpecieAssociation"
-      AssociationStrength <|-- CrossSpecieAssociation
-        click CrossSpecieAssociation href "../CrossSpecieAssociation"
+      AssociationStrength <|-- IntraSpeciesAssociation
+        click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
+      AssociationStrength <|-- CrossSpeciesAssociation
+        click CrossSpeciesAssociation href "../CrossSpeciesAssociation"
       AssociationStrength <|-- ComputationallyInferredAssociation
         click ComputationallyInferredAssociation href "../ComputationallyInferredAssociation"
       AssociationStrength <|-- SequenceSimilarity
@@ -58,8 +58,8 @@ URI: [motif:AssociationStrength](https://knetminer.com/terms/motifs/motif-catego
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * **AssociationStrength**
-        * [IntraSpecieAssociation](IntraSpecieAssociation.md)
-        * [CrossSpecieAssociation](CrossSpecieAssociation.md)
+        * [IntraSpeciesAssociation](IntraSpeciesAssociation.md)
+        * [CrossSpeciesAssociation](CrossSpeciesAssociation.md)
         * [ComputationallyInferredAssociation](ComputationallyInferredAssociation.md)
 
 
