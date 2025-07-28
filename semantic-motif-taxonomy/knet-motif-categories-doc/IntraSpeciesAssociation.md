@@ -1,6 +1,6 @@
 
 
-# Class: Intra-Species Association (IntraSpeciesAssociation) 
+# Class: Intra-Specie Association (IntraSpeciesAssociation) 
 
 
 _Associations in this category are based on the same species of the gene that is considered, contrary_
@@ -11,8 +11,6 @@ __
 
 
 
-
-* __NOTE__: this is an abstract class and should not be instantiated directly
 
 
 URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-categories/IntraSpeciesAssociation)
@@ -26,12 +24,12 @@ URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-ca
  classDiagram
     class IntraSpeciesAssociation
     click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
-      AssociationStrength <|-- IntraSpeciesAssociation
-        click AssociationStrength href "../AssociationStrength"
+      SpeciesSpanQualifier <|-- IntraSpeciesAssociation
+        click SpeciesSpanQualifier href "../SpeciesSpanQualifier"
       
 
-      IntraSpeciesAssociation <|-- IntraTraitAssn
-        click IntraTraitAssn href "../IntraTraitAssn"
+      IntraSpeciesAssociation <|-- IntraSpeciesAnnotation
+        click IntraSpeciesAnnotation href "../IntraSpeciesAnnotation"
       IntraSpeciesAssociation <|-- GeneExpression
         click GeneExpression href "../GeneExpression"
       IntraSpeciesAssociation <|-- Homoeology
@@ -46,8 +44,8 @@ URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-ca
 
 
 ## Inheritance
-* [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [AssociationStrength](AssociationStrength.md)
+* [SemanticMotifQualifier](SemanticMotifQualifier.md)
+    * [SpeciesSpanQualifier](SpeciesSpanQualifier.md)
         * **IntraSpeciesAssociation**
 
 
@@ -63,7 +61,7 @@ URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-ca
 
 | mixed into | description |
 | --- | --- |
-| [IntraTraitAssn](IntraTraitAssn.md) | A gene-trait association that is established with information and methods wit... |
+| [IntraSpeciesAnnotation](IntraSpeciesAnnotation.md) | Annotations between genes and other entities that are within the same species |
 | [GeneExpression](GeneExpression.md) | Associations of this type are related to gene expression, for instance becaus... |
 | [Homoeology](Homoeology.md) | Associations related to homoeology |
 
@@ -78,13 +76,6 @@ URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-ca
 
 
 
-
-
-### Annotations
-
-| property | value |
-| --- | --- |
-| associationStrength | 1 |
 
 
 
@@ -119,20 +110,15 @@ URI: [motif:IntraSpeciesAssociation](https://knetminer.com/terms/motifs/motif-ca
 <details>
 ```yaml
 name: IntraSpeciesAssociation
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 1
 description: 'Associations in this category are based on the same species of the gene
   that is considered, contrary
 
   to, eg, homology or sequence similarity.
 
   '
-title: Intra-Species Association
+title: Intra-Specie Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: AssociationStrength
-abstract: true
+is_a: SpeciesSpanQualifier
 mixin: true
 
 ```
@@ -143,20 +129,15 @@ mixin: true
 <details>
 ```yaml
 name: IntraSpeciesAssociation
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 1
 description: 'Associations in this category are based on the same species of the gene
   that is considered, contrary
 
   to, eg, homology or sequence similarity.
 
   '
-title: Intra-Species Association
+title: Intra-Specie Association
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: AssociationStrength
-abstract: true
+is_a: SpeciesSpanQualifier
 mixin: true
 
 ```

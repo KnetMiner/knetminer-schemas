@@ -1,6 +1,6 @@
 
 
-# Class: Text Mining Annotation about Sequence Similarity (SeqSimTextMining) 
+# Class: Sequence Similarity Text Mining (SeqSimTextMining) 
 
 
 _An association that represents a text mining annotation based on sequence similarity._
@@ -22,8 +22,8 @@ URI: [motif:SeqSimTextMining](https://knetminer.com/terms/motifs/motif-categorie
  classDiagram
     class SeqSimTextMining
     click SeqSimTextMining href "../SeqSimTextMining"
-      TextMiningAnnotationMethod <|-- SeqSimTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- SeqSimTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       SequenceSimilarity <|-- SeqSimTextMining
         click SequenceSimilarity href "../SequenceSimilarity"
       
@@ -36,10 +36,9 @@ URI: [motif:SeqSimTextMining](https://knetminer.com/terms/motifs/motif-categorie
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [SequenceSimilarity](SequenceSimilarity.md) [ [AssociationStrength](AssociationStrength.md)]
-                * **SeqSimTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [SequenceSimilarity](SequenceSimilarity.md)
+            * **SeqSimTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -109,13 +108,13 @@ description: 'An association that represents a text mining annotation based on s
   similarity.
 
   '
-title: Text Mining Annotation about Sequence Similarity
+title: Sequence Similarity Text Mining
 notes:
 - 'original category no: 4.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -133,13 +132,13 @@ description: 'An association that represents a text mining annotation based on s
   similarity.
 
   '
-title: Text Mining Annotation about Sequence Similarity
+title: Sequence Similarity Text Mining
 notes:
 - 'original category no: 4.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

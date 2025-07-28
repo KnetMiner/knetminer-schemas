@@ -1,0 +1,548 @@
+id: https://knetminer.com/terms/motifs/motif-categories/schema
+name: KnetMotifCategories
+description: |
+  A classification of semantic motif categories that KnetMiner uses to qualify semantic motif paths,
+  gene/concept links that are found by semantic motif paths and anything similar or related to that.
+version: 1.0-SNAPSHOT
+
+notes:
+  - |
+    The annotations "original category no" and "originalCategory:" refer to the
+    initial Google Doc specification from which this file was defined. 
+    TODO: to be deleted in future.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  motif: https://knetminer.com/terms/motifs/motif-categories/
+
+default_prefix: motif
+
+imports:
+  - linkml:types
+
+default_range: string
+
+classes:
+
+  SemanticMotifCategory:
+    title: Semantic Motif Category
+    description: |
+      Root class/container, all the motif categories are subclasses of this.
+    abstract: true
+
+  AssociationStrength:
+    is_a: SemanticMotifCategory
+    title: Association Strength
+    description: |
+      This branch classifies categories according to the strenght/reliability/significance/etc of the
+      gene/concept associations.
+      
+      We use the annotation 'associationStrength' to assign a strength number to categories that are 
+      related to the strength of an association. This value is intended to be inherited by subclasses
+      of an ancestor that defines it, and of course it can be overriden by the subclasses.
+    abstract: true
+
+  IntraSpeciesAssociation:
+    is_a: AssociationStrength
+    title: Intra-Species Association
+    description: |
+      Associations in this category are based on the same species of the gene that is considered, contrary
+      to, eg, homology or sequence similarity.
+    abstract: true
+    mixin: true
+    annotations:
+      associationStrength: 1
+
+  CrossSpeciesAssociation:
+    is_a: AssociationStrength
+    title: Cross-Species Association
+    description: |
+      Associations in this category are obtained by comparing information across species, eg,
+      via homology or sequence similarity.    
+    abstract: true
+    mixin: true  
+    annotations:
+      associationStrength: 2
+
+  ComputationallyInferredAssociation:
+    is_a: AssociationStrength
+    title: Computationally-Inferred Association
+    description: |
+      associations that were inferred with computational methods such as text mining or knowledge
+      graph analysis. This includes methods that are primarily based on knowledge and semantics
+      analysis, eg, text mining. We classify other methods, such as homology or gene-set enrichment
+      analysis, under biological topic.
+
+      TODO: vague definition, requires clarification. The initial reason to have this class was
+      to establish that text mining has less strength than manual annotation, but maybe we could
+      remove it and go with `associationStrength`. 
+    abstract: true
+    mixin: true
+
+  BiologicalTopic:
+    is_a: SemanticMotifCategory
+    title: Biological Topic-based Association
+    description: |
+      Categories under this branch are used to qualify a semantic motif association with the kind of
+      biological topic, experimental method, bioinformatic evidence etc that justifies the association.
+    abstract: true
+
+  Gene2PhenotypeAssociation:
+    is_a: BiologicalTopic
+    title: Gene-Phenotype Association
+    description: |
+      A causal association between a gene or gene variants and a phenotype it determines or influences.
+    abstract: true
+    notes:
+      - Initially, we only had gene/trait association, this superclass was added in case we want to make
+        a distinction between the two and for the possibility that we have other types of phenotypic characterisation.
+
+  Gene2TraitAssociation:
+    is_a: Gene2PhenotypeAssociation
+    title: Gene-Trait Association
+    description: |
+      A causal association between a gene or gene variants and a trait it determines or influences.
+      This is usually used to subclass some other category to state that
+      the trait association results from the application of some method (eg, text mining, homology).
+    abstract: true
+    mixin: true
+
+  IntraTraitAssn:
+    is_a: Gene2TraitAssociation
+    title: Intra-species Gene-Trait Association
+    description: |
+      A gene-trait association that is established with information and methods within the same species
+      as the association target gene (eg through GWAS experiments).
+    mixins:
+      - IntraSpeciesAssociation
+    notes:
+      - "original category no: 1.2"
+    annotations:
+      originalCategory: "direct::genetics"
+
+  GeneExpression:
+    is_a: BiologicalTopic
+    title: Gene Expression-Related Association
+    description: |
+      Associations of this type are related to gene expression, for instance because it's the mean used
+      to predict the function of a gene.
+    abstract: true
+    mixins:
+      - IntraSpeciesAssociation
+  
+  DifferentialExpression:
+    is_a: GeneExpression
+    title: Association based on Differential Gene Expression
+    description: |
+      A variant of the `GeneExpression` category, to specifically state that an association is based
+      of differential gene expression analysis, eg, by comparing gene expression in a treatement/control
+      experiment.
+    notes:
+      - "original category no: 2.1"
+    annotations:
+      originalCategory: "expression::differential"
+
+  CoExpression:
+    is_a: GeneExpression
+    title: Association about Co-expression of genes
+    description: |
+      A gene expression association based on the fact that two (or more genes) are similarly expressed
+      under similar conditions.
+    notes:
+      - "original category no: 2.2"
+    annotations:
+      originalCategory: "expression::coexpression"
+
+  ExpressionRegulation:
+    is_a: GeneExpression
+    title: Association about Gene Expression Regulation
+    description: |
+      Association about the regulation of the gene expression of a gene done by another gene, protein or
+      biological entity.
+    abstract: true
+
+  RegulationManualAnn:
+    is_a: ExpressionRegulation
+    title: Manual Annotation about Gene Expression Regulation
+    description: |
+      An association that represents a manual annotation based on gene expression regulation. 
+    mixins: 
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 2.3"
+    annotations:
+      originalCategory: "expression::regulation::annotation"
+
+  RegulationTraitAssn:
+    is_a: ExpressionRegulation
+    title: Gene-to-Trait Association via Gene Expression Regulation
+    description: |
+      A gene-to-trait association based on gene expression regulation.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 2.4"
+    annotations:
+      originalCategory: "expression::regulation::genetics"
+
+  RegulationTextMining:
+    is_a: ExpressionRegulation
+    title: Text Mining Annotation about Gene Expression Regulation
+    description: |
+      An association that represents a text mining annotation based on gene expression regulation.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 2.5"
+    annotations:
+      associationStrength: 2.1
+      originalCategory: "expression::regulation::literature"
+
+  PhysicalInteraction:
+    is_a: BiologicalTopic
+    title: Physical Interaction-related Association
+    description: |
+      Associations of this type are related to physical interactions between genes, proteins or other 
+      biomolecular entities.
+    abstract: true
+
+  PhysInteractManualAnn:
+    is_a: PhysicalInteraction
+    title: Manual Annotation about Physical Interaction
+    description: |
+      An association that represents a manual annotation based on physical interaction.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 2.6"
+    annotations:
+      originalCategory: "interaction::physical::annotation"
+
+  PhysInteractTraitAssn:
+    is_a: PhysicalInteraction
+    title: Gene-to-Trait Association via Physical Interaction
+    description: |
+      A gene-to-trait association based on physical interaction.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 2.7"
+    annotations:
+      originalCategory: "interaction::physical::genetics"
+
+  PhysInteractTextMining:
+    is_a: PhysicalInteraction
+    title: Text Mining Annotation about Physical Interaction
+    description: |
+      An association that represents a text mining annotation based on physical interaction.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 2.8"
+    annotations:
+      originalCategory: "interaction::physical::literature"
+
+  GeneGeneInteraction:
+    is_a: BiologicalTopic
+    title: Gene-Gene Interaction-related Association
+    description: |
+     Associations related to interactions between genes, such as genetic interactions,
+     epistasis, or other forms of gene interactions, direct or indirect.
+    abstract: true
+
+  GeneIntManualAnn:
+    is_a: GeneGeneInteraction
+    title: Manual Annotation about Gene-Gene Interaction
+    description: |
+      An association that represents a manual annotation based on gene-gene interaction.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 2.9"
+    annotations:
+      originalCategory: "interaction::genetic::annotation"
+
+  GeneIntTraitAnn:
+    is_a: GeneGeneInteraction
+    title: Gene-to-Trait Association via Gene-Gene Interaction
+    description: |
+      A gene-to-trait association based on gene-gene interaction.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 2.10"
+    annotations:
+      originalCategory: "interaction::genetic::genetics"
+
+  GeneIntTextMining:
+    is_a: GeneGeneInteraction
+    title: Text Mining Annotation about Gene-Gene Interaction
+    description: |
+      An association that represents a text mining annotation based on gene-gene interaction.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 2.11"
+    annotations:
+      originalCategory: "interaction::genetic::literature"
+
+  Phylogeny:
+    is_a: BiologicalTopic
+    title: Phylogeny-related Association
+    description: |
+      Associations of this type are related to phylogenetic relationships, such as homoeology, homology
+      or other evolutionary relationships between genes or species.
+    abstract: true
+
+  Homoeology:
+    is_a: Phylogeny
+    title: Homoeology-related Association
+    description: |
+      Associations related to homoeology. Homoeologs are pairs of genes that originated by speciation 
+      and were brought back together in the same genome by allopolyploidization (PMC4920642).
+
+      Allopolyploidization is the formation of new species through the combination of chromosomes from
+      different species.
+
+      Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.
+    abstract: true
+    mixins:
+      - IntraSpeciesAssociation
+    annotations:
+      associationStrength: 3.1
+
+  HomoeologyManualAnn:
+    is_a: Homoeology
+    title: Manual Annotation about Homoeology
+    description: |
+      An association that represents a manual annotation based on homoeology.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 3.4"
+    annotations:
+      originalCategory: "phylogeny::homoeology::annotation"
+
+  HomoeologyTraitAssn:
+    is_a: Homoeology
+    title: Gene-to-Trait Association via Homoeology
+    description: |
+      A gene-to-trait association based on homoeology.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 3.5"
+    annotations:
+      originalCategory: "phylogeny::homoeology::genetics"
+
+  HomoeologyTextMining:
+    is_a: Homoeology
+    title: Text Mining Annotation about Homoeology
+    description: |
+      An association that represents a text mining annotation based on homoeology.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 3.6"
+    annotations:
+      associationStrength: 3.2
+      originalCategory: "phylogeny::homoeology::literature"
+
+
+  Homology:
+    is_a: Phylogeny
+    title: Homology-related Association
+    description: |
+      Associations related to homology, that it, cross-species gene similarity resulting from 
+      shared ancestry.
+      Based on the meaning of this term, this class is made a subclass of 'CrossSpeciesAssociation'.
+    abstract: true
+    mixins:
+      - CrossSpeciesAssociation
+    annotations:
+      associationStrength: 3.2
+    
+  HomologyManualAnn:
+    is_a: Homology
+    title: Manual Annotation about Homology
+    description: |
+      An association that represents a manual annotation based on homology.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 3.1"
+    annotations:
+      originalCategory: "phylogeny::homology::annotation"
+
+  HomologyTraitAssn:
+    is_a: Homology
+    title: Gene-to-Trait Association via homology
+    description: |
+      A gene-to-trait association based on homology.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 3.2"
+    annotations:
+      originalCategory: "phylogeny::homology::genetics"
+
+  HomologyTextMining:
+    is_a: Homology
+    title: Text Mining Annotation about Homology
+    description: |
+      An association that represents a text mining annotation based on homology.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 3.3"
+    annotations:
+      associationStrength: 3.3
+      originalCategory: "phylogeny::homology::literature"
+
+  HomologyInteraction:
+    is_a: Homology
+    title: Association about Homology Interaction
+    description: |
+      These paths rely on a multi-step hypothesis that assumes a protein-protein interaction is 
+      conserved across species, adding a significant layer of uncertainty.
+    abstract: true
+    notes:
+      - "original category no: Tier 5"
+    annotations:
+      associationStrength: 5
+
+  HomIntManualAnn:
+    is_a: HomologyInteraction
+    title: Manual Annotation via homology and interaction
+    description: |
+      An association that represents a manual annotation based on homology and interaction.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 5.1"
+    annotations:
+      originalCategory: "homint::annotation"
+
+  HomIntTraitAssn:
+    is_a: HomologyInteraction
+    title: Gene-to-Trait Association via homology and interaction
+    description: |
+      A gene-to-trait association based on homology.
+    mixins:
+      - Gene2TraitAssociation
+    notes:
+      - "original category no: 5.2"
+    annotations:
+      originalCategory: "homint::genetics"
+
+  HomIntTextMining:
+    is_a: HomologyInteraction
+    title: Text Mining Annotation via homology and interaction
+    description: |
+      An association that represents a text mining annotation based on homology and interaction.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 5.3"
+    annotations:
+      originalCategory: "homint::literature"
+
+  SequenceSimilarity:
+    is_a: Phylogeny
+    title: Sequence Similarity-based Association
+    description: |
+      Associations of this type are more speculative than homoeology or homology, since sequence similarity
+      does not guarantee a shared evolutionary origin or function.
+    abstract: true
+    mixins:
+      - AssociationStrength
+    notes:
+      - "original category no: Tier 4"
+    annotations:
+      associationStrength: 4
+
+
+  SeqSimManualAnn:
+    is_a: SequenceSimilarity
+    title: Manual Annotation about Sequence Similarity
+    description: |
+      An association that represents a manual annotation based on sequence similarity.
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 4.1"
+    annotations:
+      originalCategory: "phylogeny::similarity::annotation"
+
+  SeqSimTextMining:
+    is_a: SequenceSimilarity
+    title: Text Mining Annotation about Sequence Similarity
+    description: |
+      An association that represents a text mining annotation based on sequence similarity.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 4.2"
+    annotations:
+      originalCategory: "phylogeny::similarity::literature"
+
+  AnnotationMethod:
+    is_a: SemanticMotifCategory
+    title: Annotation Method
+    description: |
+      Categories under this branch are used to qualify semantic motif associations according to the
+      method used to establish the association, such as manual annotation or text mining.
+    abstract: true
+  
+  ManualAnnotationMethod:
+    is_a: AnnotationMethod
+    title: Manual Annotation Method
+    description: |
+      An association category that represents a manual annotation, provided by a curator or expert.
+
+      Note that this is the abstract category used to derive concrete/instantiantable categories
+      that imply the use of this annotation method. Use `ManualAnnotation` to associate a semantic 
+      motif to a manual annotation.
+    abstract: true
+    mixin: true
+
+  ManualAnnotation:
+    is_a: AnnotationMethod
+    title: Manual Annotation
+    description: |
+      An association category that represents a manual annotation, provided by a curator or expert.
+    abstract: true
+    mixins:
+      - ManualAnnotationMethod
+    notes:
+      - "original category no: 1.1"
+    annotations:
+      originalCategory: "direct::annotation"
+
+  TextMiningAnnotationMethod:
+    is_a: AnnotationMethod
+    title: Text Mining Annotation Method
+    description: |
+      An association that was computed via text mining methods, such as name-entity recognition,
+      semantic similarity or LLM-based embeddings.
+
+      Note that this is the abstract category used to derive concrete/instantiantable categories
+      that imply the use of this annotation method. Use `TextMiningAnnotation` to associate a 
+      semantic motif to a text mining annotation.
+    abstract: true
+    mixin: true
+    mixins:
+      - ComputationallyInferredAssociation
+
+  TextMiningAnnotation:
+    is_a: AnnotationMethod
+    title: Text Mining Annotation
+    description: |
+      An association that was computed via text mining methods, such as name-entity recognition,
+      semantic similarity or LLM-based embeddings.
+    mixins:
+      - TextMiningAnnotationMethod
+    notes:
+      - "original category no: 1.2"
+    annotations:
+      originalCategory: "direct::literature"

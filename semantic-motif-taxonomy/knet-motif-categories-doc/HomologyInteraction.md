@@ -1,6 +1,6 @@
 
 
-# Class: Association about Homology Interaction (HomologyInteraction) 
+# Class: Homology Interaction (HomologyInteraction) 
 
 
 _These paths rely on a multi-step hypothesis that assumes a protein-protein interaction is _
@@ -26,12 +26,12 @@ URI: [motif:HomologyInteraction](https://knetminer.com/terms/motifs/motif-catego
  classDiagram
     class HomologyInteraction
     click HomologyInteraction href "../HomologyInteraction"
-      Homology <|-- HomologyInteraction
-        click Homology href "../Homology"
+      SemanticMotifCategory <|-- HomologyInteraction
+        click SemanticMotifCategory href "../SemanticMotifCategory"
       
 
-      HomologyInteraction <|-- HomIntManualAnn
-        click HomIntManualAnn href "../HomIntManualAnn"
+      HomologyInteraction <|-- HomIntAnn
+        click HomIntAnn href "../HomIntAnn"
       HomologyInteraction <|-- HomIntTraitAssn
         click HomIntTraitAssn href "../HomIntTraitAssn"
       HomologyInteraction <|-- HomIntTextMining
@@ -47,13 +47,10 @@ URI: [motif:HomologyInteraction](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * **HomologyInteraction**
-                    * [HomIntManualAnn](HomIntManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-                    * [HomIntTraitAssn](HomIntTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
-                    * [HomIntTextMining](HomIntTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * **HomologyInteraction**
+        * [HomIntAnn](HomIntAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+        * [HomIntTraitAssn](HomIntTraitAssn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+        * [HomIntTextMining](HomIntTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -74,13 +71,6 @@ URI: [motif:HomologyInteraction](https://knetminer.com/terms/motifs/motif-catego
 
 
 
-
-
-### Annotations
-
-| property | value |
-| --- | --- |
-| associationStrength | 5 |
 
 
 
@@ -115,17 +105,13 @@ URI: [motif:HomologyInteraction](https://knetminer.com/terms/motifs/motif-catego
 <details>
 ```yaml
 name: HomologyInteraction
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 5
 description: "These paths rely on a multi-step hypothesis that assumes a protein-protein\
   \ interaction is \nconserved across species, adding a significant layer of uncertainty.\n"
-title: Association about Homology Interaction
+title: Homology Interaction
 notes:
 - 'original category no: Tier 5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Homology
+is_a: SemanticMotifCategory
 abstract: true
 
 ```
@@ -136,17 +122,13 @@ abstract: true
 <details>
 ```yaml
 name: HomologyInteraction
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 5
 description: "These paths rely on a multi-step hypothesis that assumes a protein-protein\
   \ interaction is \nconserved across species, adding a significant layer of uncertainty.\n"
-title: Association about Homology Interaction
+title: Homology Interaction
 notes:
 - 'original category no: Tier 5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Homology
+is_a: SemanticMotifCategory
 abstract: true
 
 ```

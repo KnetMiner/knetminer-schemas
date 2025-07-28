@@ -1,6 +1,6 @@
 
 
-# Class: Association about Gene Expression Regulation (ExpressionRegulation) 
+# Class: Expression Regulation (ExpressionRegulation) 
 
 
 _Association about the regulation of the gene expression of a gene done by another gene, protein or_
@@ -30,8 +30,8 @@ URI: [motif:ExpressionRegulation](https://knetminer.com/terms/motifs/motif-categ
         click GeneExpression href "../GeneExpression"
       
 
-      ExpressionRegulation <|-- RegulationManualAnn
-        click RegulationManualAnn href "../RegulationManualAnn"
+      ExpressionRegulation <|-- RegulationAnn
+        click RegulationAnn href "../RegulationAnn"
       ExpressionRegulation <|-- RegulationTraitAssn
         click RegulationTraitAssn href "../RegulationTraitAssn"
       ExpressionRegulation <|-- RegulationTextMining
@@ -47,12 +47,11 @@ URI: [motif:ExpressionRegulation](https://knetminer.com/terms/motifs/motif-categ
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * **ExpressionRegulation**
-                * [RegulationManualAnn](RegulationManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-                * [RegulationTraitAssn](RegulationTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
-                * [RegulationTextMining](RegulationTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * **ExpressionRegulation**
+            * [RegulationAnn](RegulationAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [RegulationTraitAssn](RegulationTraitAssn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+            * [RegulationTextMining](RegulationTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -113,7 +112,7 @@ description: 'Association about the regulation of the gene expression of a gene 
   biological entity.
 
   '
-title: Association about Gene Expression Regulation
+title: Expression Regulation
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 abstract: true
@@ -132,7 +131,7 @@ description: 'Association about the regulation of the gene expression of a gene 
   biological entity.
 
   '
-title: Association about Gene Expression Regulation
+title: Expression Regulation
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneExpression
 abstract: true

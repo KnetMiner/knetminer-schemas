@@ -1,6 +1,6 @@
 
 
-# Class: Physical Interaction-related Association (PhysicalInteraction) 
+# Class: Physical Bio-Molecular Interaction (PhysicalInteraction) 
 
 
 _Associations of this type are related to physical interactions between genes, proteins or other _
@@ -26,12 +26,12 @@ URI: [motif:PhysicalInteraction](https://knetminer.com/terms/motifs/motif-catego
  classDiagram
     class PhysicalInteraction
     click PhysicalInteraction href "../PhysicalInteraction"
-      BiologicalTopic <|-- PhysicalInteraction
-        click BiologicalTopic href "../BiologicalTopic"
+      BioMolecularInteraction <|-- PhysicalInteraction
+        click BioMolecularInteraction href "../BioMolecularInteraction"
       
 
-      PhysicalInteraction <|-- PhysInteractManualAnn
-        click PhysInteractManualAnn href "../PhysInteractManualAnn"
+      PhysicalInteraction <|-- PhysInteractAnn
+        click PhysInteractAnn href "../PhysInteractAnn"
       PhysicalInteraction <|-- PhysInteractTraitAssn
         click PhysInteractTraitAssn href "../PhysInteractTraitAssn"
       PhysicalInteraction <|-- PhysInteractTextMining
@@ -47,11 +47,11 @@ URI: [motif:PhysicalInteraction](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * **PhysicalInteraction**
-            * [PhysInteractManualAnn](PhysInteractManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-            * [PhysInteractTraitAssn](PhysInteractTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
-            * [PhysInteractTextMining](PhysInteractTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+            * [PhysInteractAnn](PhysInteractAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [PhysInteractTraitAssn](PhysInteractTraitAssn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+            * [PhysInteractTextMining](PhysInteractTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -108,9 +108,9 @@ URI: [motif:PhysicalInteraction](https://knetminer.com/terms/motifs/motif-catego
 name: PhysicalInteraction
 description: "Associations of this type are related to physical interactions between\
   \ genes, proteins or other \nbiomolecular entities.\n"
-title: Physical Interaction-related Association
+title: Physical Bio-Molecular Interaction
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: BioMolecularInteraction
 abstract: true
 
 ```
@@ -123,9 +123,9 @@ abstract: true
 name: PhysicalInteraction
 description: "Associations of this type are related to physical interactions between\
   \ genes, proteins or other \nbiomolecular entities.\n"
-title: Physical Interaction-related Association
+title: Physical Bio-Molecular Interaction
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: BioMolecularInteraction
 abstract: true
 
 ```

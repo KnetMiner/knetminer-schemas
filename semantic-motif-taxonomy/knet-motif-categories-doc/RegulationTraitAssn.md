@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via Gene Expression Regulation (RegulationTraitAssn) 
+# Class: Expression Regulation Trait (RegulationTraitAssn) 
 
 
 _A gene-to-trait association based on gene expression regulation._
@@ -22,8 +22,8 @@ URI: [motif:RegulationTraitAssn](https://knetminer.com/terms/motifs/motif-catego
  classDiagram
     class RegulationTraitAssn
     click RegulationTraitAssn href "../RegulationTraitAssn"
-      Gene2TraitAssociation <|-- RegulationTraitAssn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- RegulationTraitAssn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       ExpressionRegulation <|-- RegulationTraitAssn
         click ExpressionRegulation href "../ExpressionRegulation"
       
@@ -36,10 +36,9 @@ URI: [motif:RegulationTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * [ExpressionRegulation](ExpressionRegulation.md)
-                * **RegulationTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * [ExpressionRegulation](ExpressionRegulation.md)
+            * **RegulationTraitAssn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -108,13 +107,13 @@ annotations:
 description: 'A gene-to-trait association based on gene expression regulation.
 
   '
-title: Gene-to-Trait Association via Gene Expression Regulation
+title: Expression Regulation Trait
 notes:
 - 'original category no: 2.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -131,13 +130,13 @@ annotations:
 description: 'A gene-to-trait association based on gene expression regulation.
 
   '
-title: Gene-to-Trait Association via Gene Expression Regulation
+title: Expression Regulation Trait
 notes:
 - 'original category no: 2.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

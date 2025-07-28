@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via Physical Interaction (PhysInteractTraitAssn) 
+# Class: Physical Interaction Trait (PhysInteractTraitAssn) 
 
 
 _A gene-to-trait association based on physical interaction._
@@ -22,8 +22,8 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
  classDiagram
     class PhysInteractTraitAssn
     click PhysInteractTraitAssn href "../PhysInteractTraitAssn"
-      Gene2TraitAssociation <|-- PhysInteractTraitAssn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- PhysInteractTraitAssn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       PhysicalInteraction <|-- PhysInteractTraitAssn
         click PhysicalInteraction href "../PhysicalInteraction"
       
@@ -36,9 +36,9 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [PhysicalInteraction](PhysicalInteraction.md)
-            * **PhysInteractTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+            * **PhysInteractTraitAssn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -107,13 +107,13 @@ annotations:
 description: 'A gene-to-trait association based on physical interaction.
 
   '
-title: Gene-to-Trait Association via Physical Interaction
+title: Physical Interaction Trait
 notes:
 - 'original category no: 2.7'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -130,13 +130,13 @@ annotations:
 description: 'A gene-to-trait association based on physical interaction.
 
   '
-title: Gene-to-Trait Association via Physical Interaction
+title: Physical Interaction Trait
 notes:
 - 'original category no: 2.7'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

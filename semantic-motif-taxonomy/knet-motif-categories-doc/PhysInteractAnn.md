@@ -1,9 +1,9 @@
 
 
-# Class: Manual Annotation about Physical Interaction (PhysInteractManualAnn) 
+# Class: Physical Interaction Annotation (PhysInteractAnn) 
 
 
-_An association that represents a manual annotation based on physical interaction._
+_A curated annotation about physical interaction._
 
 __
 
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-categories/PhysInteractManualAnn)
+URI: [motif:PhysInteractAnn](https://knetminer.com/terms/motifs/motif-categories/PhysInteractAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 
 ```mermaid
  classDiagram
-    class PhysInteractManualAnn
-    click PhysInteractManualAnn href "../PhysInteractManualAnn"
-      ManualAnnotationMethod <|-- PhysInteractManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      PhysicalInteraction <|-- PhysInteractManualAnn
+    class PhysInteractAnn
+    click PhysInteractAnn href "../PhysInteractAnn"
+      HasCuratedAnnotation <|-- PhysInteractAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      PhysicalInteraction <|-- PhysInteractAnn
         click PhysicalInteraction href "../PhysicalInteraction"
       
       
@@ -36,9 +36,9 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [PhysicalInteraction](PhysicalInteraction.md)
-            * **PhysInteractManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+            * **PhysInteractAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -82,8 +82,8 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:PhysInteractManualAnn |
-| native | motif:PhysInteractManualAnn |
+| self | motif:PhysInteractAnn |
+| native | motif:PhysInteractAnn |
 
 
 
@@ -99,22 +99,21 @@ URI: [motif:PhysInteractManualAnn](https://knetminer.com/terms/motifs/motif-cate
 
 <details>
 ```yaml
-name: PhysInteractManualAnn
+name: PhysInteractAnn
 annotations:
   originalCategory:
     tag: originalCategory
     value: interaction::physical::annotation
-description: 'An association that represents a manual annotation based on physical
-  interaction.
+description: 'A curated annotation about physical interaction.
 
   '
-title: Manual Annotation about Physical Interaction
+title: Physical Interaction Annotation
 notes:
 - 'original category no: 2.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -123,22 +122,21 @@ mixins:
 
 <details>
 ```yaml
-name: PhysInteractManualAnn
+name: PhysInteractAnn
 annotations:
   originalCategory:
     tag: originalCategory
     value: interaction::physical::annotation
-description: 'An association that represents a manual annotation based on physical
-  interaction.
+description: 'A curated annotation about physical interaction.
 
   '
-title: Manual Annotation about Physical Interaction
+title: Physical Interaction Annotation
 notes:
 - 'original category no: 2.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

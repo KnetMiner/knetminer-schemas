@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via Gene-Gene Interaction (GeneIntTraitAnn) 
+# Class: Gene-Gene Interaction Trait (GeneIntTraitAnn) 
 
 
 _A gene-to-trait association based on gene-gene interaction._
@@ -22,8 +22,8 @@ URI: [motif:GeneIntTraitAnn](https://knetminer.com/terms/motifs/motif-categories
  classDiagram
     class GeneIntTraitAnn
     click GeneIntTraitAnn href "../GeneIntTraitAnn"
-      Gene2TraitAssociation <|-- GeneIntTraitAnn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- GeneIntTraitAnn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       GeneGeneInteraction <|-- GeneIntTraitAnn
         click GeneGeneInteraction href "../GeneGeneInteraction"
       
@@ -36,9 +36,9 @@ URI: [motif:GeneIntTraitAnn](https://knetminer.com/terms/motifs/motif-categories
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [GeneGeneInteraction](GeneGeneInteraction.md)
-            * **GeneIntTraitAnn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+            * **GeneIntTraitAnn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -107,13 +107,13 @@ annotations:
 description: 'A gene-to-trait association based on gene-gene interaction.
 
   '
-title: Gene-to-Trait Association via Gene-Gene Interaction
+title: Gene-Gene Interaction Trait
 notes:
 - 'original category no: 2.10'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -130,13 +130,13 @@ annotations:
 description: 'A gene-to-trait association based on gene-gene interaction.
 
   '
-title: Gene-to-Trait Association via Gene-Gene Interaction
+title: Gene-Gene Interaction Trait
 notes:
 - 'original category no: 2.10'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

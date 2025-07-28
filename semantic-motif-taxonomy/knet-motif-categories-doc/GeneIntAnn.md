@@ -1,6 +1,6 @@
 
 
-# Class: Manual Annotation about Gene-Gene Interaction (GeneIntManualAnn) 
+# Class: Gene-Gene Interaction Annotation (GeneIntAnn) 
 
 
 _An association that represents a manual annotation based on gene-gene interaction._
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:GeneIntManualAnn](https://knetminer.com/terms/motifs/motif-categories/GeneIntManualAnn)
+URI: [motif:GeneIntAnn](https://knetminer.com/terms/motifs/motif-categories/GeneIntAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:GeneIntManualAnn](https://knetminer.com/terms/motifs/motif-categorie
 
 ```mermaid
  classDiagram
-    class GeneIntManualAnn
-    click GeneIntManualAnn href "../GeneIntManualAnn"
-      ManualAnnotationMethod <|-- GeneIntManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      GeneGeneInteraction <|-- GeneIntManualAnn
+    class GeneIntAnn
+    click GeneIntAnn href "../GeneIntAnn"
+      HasCuratedAnnotation <|-- GeneIntAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      GeneGeneInteraction <|-- GeneIntAnn
         click GeneGeneInteraction href "../GeneGeneInteraction"
       
       
@@ -36,9 +36,9 @@ URI: [motif:GeneIntManualAnn](https://knetminer.com/terms/motifs/motif-categorie
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [GeneGeneInteraction](GeneGeneInteraction.md)
-            * **GeneIntManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+            * **GeneIntAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -82,8 +82,8 @@ URI: [motif:GeneIntManualAnn](https://knetminer.com/terms/motifs/motif-categorie
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:GeneIntManualAnn |
-| native | motif:GeneIntManualAnn |
+| self | motif:GeneIntAnn |
+| native | motif:GeneIntAnn |
 
 
 
@@ -99,7 +99,7 @@ URI: [motif:GeneIntManualAnn](https://knetminer.com/terms/motifs/motif-categorie
 
 <details>
 ```yaml
-name: GeneIntManualAnn
+name: GeneIntAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -108,13 +108,13 @@ description: 'An association that represents a manual annotation based on gene-g
   interaction.
 
   '
-title: Manual Annotation about Gene-Gene Interaction
+title: Gene-Gene Interaction Annotation
 notes:
 - 'original category no: 2.9'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -123,7 +123,7 @@ mixins:
 
 <details>
 ```yaml
-name: GeneIntManualAnn
+name: GeneIntAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -132,13 +132,13 @@ description: 'An association that represents a manual annotation based on gene-g
   interaction.
 
   '
-title: Manual Annotation about Gene-Gene Interaction
+title: Gene-Gene Interaction Annotation
 notes:
 - 'original category no: 2.9'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

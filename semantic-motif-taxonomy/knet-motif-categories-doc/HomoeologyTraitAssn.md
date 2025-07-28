@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via Homoeology (HomoeologyTraitAssn) 
+# Class: Homoeology Trait (HomoeologyTraitAssn) 
 
 
 _A gene-to-trait association based on homoeology._
@@ -22,8 +22,8 @@ URI: [motif:HomoeologyTraitAssn](https://knetminer.com/terms/motifs/motif-catego
  classDiagram
     class HomoeologyTraitAssn
     click HomoeologyTraitAssn href "../HomoeologyTraitAssn"
-      Gene2TraitAssociation <|-- HomoeologyTraitAssn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- HomoeologyTraitAssn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       Homoeology <|-- HomoeologyTraitAssn
         click Homoeology href "../Homoeology"
       
@@ -36,10 +36,9 @@ URI: [motif:HomoeologyTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-                * **HomoeologyTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+            * **HomoeologyTraitAssn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -108,13 +107,13 @@ annotations:
 description: 'A gene-to-trait association based on homoeology.
 
   '
-title: Gene-to-Trait Association via Homoeology
+title: Homoeology Trait
 notes:
 - 'original category no: 3.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -131,13 +130,13 @@ annotations:
 description: 'A gene-to-trait association based on homoeology.
 
   '
-title: Gene-to-Trait Association via Homoeology
+title: Homoeology Trait
 notes:
 - 'original category no: 3.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

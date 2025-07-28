@@ -1,6 +1,6 @@
 
 
-# Class: Manual Annotation about Sequence Similarity (SeqSimManualAnn) 
+# Class: Sequence Similarity Annotation (SeqSimAnn) 
 
 
 _An association that represents a manual annotation based on sequence similarity._
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories/SeqSimManualAnn)
+URI: [motif:SeqSimAnn](https://knetminer.com/terms/motifs/motif-categories/SeqSimAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 ```mermaid
  classDiagram
-    class SeqSimManualAnn
-    click SeqSimManualAnn href "../SeqSimManualAnn"
-      ManualAnnotationMethod <|-- SeqSimManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      SequenceSimilarity <|-- SeqSimManualAnn
+    class SeqSimAnn
+    click SeqSimAnn href "../SeqSimAnn"
+      HasCuratedAnnotation <|-- SeqSimAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      SequenceSimilarity <|-- SeqSimAnn
         click SequenceSimilarity href "../SequenceSimilarity"
       
       
@@ -36,10 +36,9 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [SequenceSimilarity](SequenceSimilarity.md) [ [AssociationStrength](AssociationStrength.md)]
-                * **SeqSimManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [SequenceSimilarity](SequenceSimilarity.md)
+            * **SeqSimAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -83,8 +82,8 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:SeqSimManualAnn |
-| native | motif:SeqSimManualAnn |
+| self | motif:SeqSimAnn |
+| native | motif:SeqSimAnn |
 
 
 
@@ -100,7 +99,7 @@ URI: [motif:SeqSimManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 <details>
 ```yaml
-name: SeqSimManualAnn
+name: SeqSimAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -109,13 +108,13 @@ description: 'An association that represents a manual annotation based on sequen
   similarity.
 
   '
-title: Manual Annotation about Sequence Similarity
+title: Sequence Similarity Annotation
 notes:
 - 'original category no: 4.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -124,7 +123,7 @@ mixins:
 
 <details>
 ```yaml
-name: SeqSimManualAnn
+name: SeqSimAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -133,13 +132,13 @@ description: 'An association that represents a manual annotation based on sequen
   similarity.
 
   '
-title: Manual Annotation about Sequence Similarity
+title: Sequence Similarity Annotation
 notes:
 - 'original category no: 4.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SequenceSimilarity
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

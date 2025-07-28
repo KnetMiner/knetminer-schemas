@@ -1,6 +1,6 @@
 
 
-# Class: Gene-Gene Interaction-related Association (GeneGeneInteraction) 
+# Class: Gene-Gene Interaction (GeneGeneInteraction) 
 
 
 _Associations related to interactions between genes, such as genetic interactions,_
@@ -26,12 +26,12 @@ URI: [motif:GeneGeneInteraction](https://knetminer.com/terms/motifs/motif-catego
  classDiagram
     class GeneGeneInteraction
     click GeneGeneInteraction href "../GeneGeneInteraction"
-      BiologicalTopic <|-- GeneGeneInteraction
-        click BiologicalTopic href "../BiologicalTopic"
+      BioMolecularInteraction <|-- GeneGeneInteraction
+        click BioMolecularInteraction href "../BioMolecularInteraction"
       
 
-      GeneGeneInteraction <|-- GeneIntManualAnn
-        click GeneIntManualAnn href "../GeneIntManualAnn"
+      GeneGeneInteraction <|-- GeneIntAnn
+        click GeneIntAnn href "../GeneIntAnn"
       GeneGeneInteraction <|-- GeneIntTraitAnn
         click GeneIntTraitAnn href "../GeneIntTraitAnn"
       GeneGeneInteraction <|-- GeneIntTextMining
@@ -47,11 +47,11 @@ URI: [motif:GeneGeneInteraction](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * **GeneGeneInteraction**
-            * [GeneIntManualAnn](GeneIntManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-            * [GeneIntTraitAnn](GeneIntTraitAnn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
-            * [GeneIntTextMining](GeneIntTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+            * [GeneIntAnn](GeneIntAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [GeneIntTraitAnn](GeneIntTraitAnn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+            * [GeneIntTextMining](GeneIntTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -112,9 +112,9 @@ description: 'Associations related to interactions between genes, such as geneti
   epistasis, or other forms of gene interactions, direct or indirect.
 
   '
-title: Gene-Gene Interaction-related Association
+title: Gene-Gene Interaction
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: BioMolecularInteraction
 abstract: true
 
 ```
@@ -131,9 +131,9 @@ description: 'Associations related to interactions between genes, such as geneti
   epistasis, or other forms of gene interactions, direct or indirect.
 
   '
-title: Gene-Gene Interaction-related Association
+title: Gene-Gene Interaction
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: BioMolecularInteraction
 abstract: true
 
 ```

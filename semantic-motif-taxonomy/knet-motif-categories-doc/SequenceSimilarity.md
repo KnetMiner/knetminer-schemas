@@ -1,6 +1,6 @@
 
 
-# Class: Sequence Similarity-based Association (SequenceSimilarity) 
+# Class: Sequence Similarity (SequenceSimilarity) 
 
 
 _Associations of this type are more speculative than homoeology or homology, since sequence similarity_
@@ -26,14 +26,12 @@ URI: [motif:SequenceSimilarity](https://knetminer.com/terms/motifs/motif-categor
  classDiagram
     class SequenceSimilarity
     click SequenceSimilarity href "../SequenceSimilarity"
-      AssociationStrength <|-- SequenceSimilarity
-        click AssociationStrength href "../AssociationStrength"
-      Phylogeny <|-- SequenceSimilarity
-        click Phylogeny href "../Phylogeny"
+      PhylogenyConfidentAssociation <|-- SequenceSimilarity
+        click PhylogenyConfidentAssociation href "../PhylogenyConfidentAssociation"
       
 
-      SequenceSimilarity <|-- SeqSimManualAnn
-        click SeqSimManualAnn href "../SeqSimManualAnn"
+      SequenceSimilarity <|-- SeqSimAnn
+        click SeqSimAnn href "../SeqSimAnn"
       SequenceSimilarity <|-- SeqSimTextMining
         click SeqSimTextMining href "../SeqSimTextMining"
       
@@ -47,11 +45,10 @@ URI: [motif:SequenceSimilarity](https://knetminer.com/terms/motifs/motif-categor
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * **SequenceSimilarity** [ [AssociationStrength](AssociationStrength.md)]
-                * [SeqSimManualAnn](SeqSimManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-                * [SeqSimTextMining](SeqSimTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * **SequenceSimilarity**
+            * [SeqSimAnn](SeqSimAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [SeqSimTextMining](SeqSimTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -72,13 +69,6 @@ URI: [motif:SequenceSimilarity](https://knetminer.com/terms/motifs/motif-categor
 
 
 
-
-
-### Annotations
-
-| property | value |
-| --- | --- |
-| associationStrength | 4 |
 
 
 
@@ -113,24 +103,18 @@ URI: [motif:SequenceSimilarity](https://knetminer.com/terms/motifs/motif-categor
 <details>
 ```yaml
 name: SequenceSimilarity
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 4
 description: 'Associations of this type are more speculative than homoeology or homology,
   since sequence similarity
 
   does not guarantee a shared evolutionary origin or function.
 
   '
-title: Sequence Similarity-based Association
+title: Sequence Similarity
 notes:
 - 'original category no: Tier 4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Phylogeny
+is_a: PhylogenyConfidentAssociation
 abstract: true
-mixins:
-- AssociationStrength
 
 ```
 </details>
@@ -140,24 +124,18 @@ mixins:
 <details>
 ```yaml
 name: SequenceSimilarity
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 4
 description: 'Associations of this type are more speculative than homoeology or homology,
   since sequence similarity
 
   does not guarantee a shared evolutionary origin or function.
 
   '
-title: Sequence Similarity-based Association
+title: Sequence Similarity
 notes:
 - 'original category no: Tier 4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Phylogeny
+is_a: PhylogenyConfidentAssociation
 abstract: true
-mixins:
-- AssociationStrength
 
 ```
 </details>

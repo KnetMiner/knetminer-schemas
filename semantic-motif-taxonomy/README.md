@@ -11,10 +11,10 @@ The non-abstract classes that we define in the taxonomy are used by our [semanti
 
 * A [linkML-based][25] [formal specification][30]. 
 	* This has an auto-generated [human-readable form][40], based on linkML tools.
-* The [original discussion document][50] from which the above specification was produced 
+* See [this GH issue][50], where we track discussions and design decisions about the development of the taxonomy.
 
 [25]: https://linkml.io/linkml/intro/overview.html
 [30]: knet-motif-categories.linkml.yaml
 [40]: knet-motif-categories-doc/README.md
-[50]: https://docs.google.com/document/d/1350RTWTFMCzvih5SyPWS8IHQ1Pr2mQDgMXVia5Bw-a8/edit?tab=t.0
+[50]: https://github.com/KnetMiner/knetminer-schemas/issues/1
 

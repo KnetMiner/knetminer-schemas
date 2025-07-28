@@ -1,6 +1,6 @@
 
 
-# Class: Manual Annotation about Homoeology (HomoeologyManualAnn) 
+# Class: Homoeology Annotation (HomoeologyAnn) 
 
 
 _An association that represents a manual annotation based on homoeology._
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-categories/HomoeologyManualAnn)
+URI: [motif:HomoeologyAnn](https://knetminer.com/terms/motifs/motif-categories/HomoeologyAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 ```mermaid
  classDiagram
-    class HomoeologyManualAnn
-    click HomoeologyManualAnn href "../HomoeologyManualAnn"
-      ManualAnnotationMethod <|-- HomoeologyManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      Homoeology <|-- HomoeologyManualAnn
+    class HomoeologyAnn
+    click HomoeologyAnn href "../HomoeologyAnn"
+      HasCuratedAnnotation <|-- HomoeologyAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      Homoeology <|-- HomoeologyAnn
         click Homoeology href "../Homoeology"
       
       
@@ -36,10 +36,9 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-                * **HomoeologyManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+            * **HomoeologyAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -83,8 +82,8 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:HomoeologyManualAnn |
-| native | motif:HomoeologyManualAnn |
+| self | motif:HomoeologyAnn |
+| native | motif:HomoeologyAnn |
 
 
 
@@ -100,7 +99,7 @@ URI: [motif:HomoeologyManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 <details>
 ```yaml
-name: HomoeologyManualAnn
+name: HomoeologyAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -108,13 +107,13 @@ annotations:
 description: 'An association that represents a manual annotation based on homoeology.
 
   '
-title: Manual Annotation about Homoeology
+title: Homoeology Annotation
 notes:
 - 'original category no: 3.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -123,7 +122,7 @@ mixins:
 
 <details>
 ```yaml
-name: HomoeologyManualAnn
+name: HomoeologyAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -131,13 +130,13 @@ annotations:
 description: 'An association that represents a manual annotation based on homoeology.
 
   '
-title: Manual Annotation about Homoeology
+title: Homoeology Annotation
 notes:
 - 'original category no: 3.4'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

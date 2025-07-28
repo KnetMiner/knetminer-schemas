@@ -1,6 +1,6 @@
 
 
-# Class: Manual Annotation about Homology (HomologyManualAnn) 
+# Class: Homology Annotation (HomologyManualAnn) 
 
 
 _An association that represents a manual annotation based on homology._
@@ -22,8 +22,8 @@ URI: [motif:HomologyManualAnn](https://knetminer.com/terms/motifs/motif-categori
  classDiagram
     class HomologyManualAnn
     click HomologyManualAnn href "../HomologyManualAnn"
-      ManualAnnotationMethod <|-- HomologyManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
+      HasCuratedAnnotation <|-- HomologyManualAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
       Homology <|-- HomologyManualAnn
         click Homology href "../Homology"
       
@@ -36,10 +36,9 @@ URI: [motif:HomologyManualAnn](https://knetminer.com/terms/motifs/motif-categori
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * **HomologyManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
+            * **HomologyManualAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -108,13 +107,13 @@ annotations:
 description: 'An association that represents a manual annotation based on homology.
 
   '
-title: Manual Annotation about Homology
+title: Homology Annotation
 notes:
 - 'original category no: 3.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -131,13 +130,13 @@ annotations:
 description: 'An association that represents a manual annotation based on homology.
 
   '
-title: Manual Annotation about Homology
+title: Homology Annotation
 notes:
 - 'original category no: 3.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

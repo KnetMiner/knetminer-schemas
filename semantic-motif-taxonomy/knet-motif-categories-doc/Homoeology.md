@@ -1,6 +1,6 @@
 
 
-# Class: Homoeology-related Association (Homoeology) 
+# Class: Homoeology (Homoeology) 
 
 
 _Associations related to homoeology. Homoeologs are pairs of genes that originated by speciation _
@@ -38,12 +38,12 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
     click Homoeology href "../Homoeology"
       IntraSpeciesAssociation <|-- Homoeology
         click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
-      Phylogeny <|-- Homoeology
-        click Phylogeny href "../Phylogeny"
+      PhylogenyConfidentAssociation <|-- Homoeology
+        click PhylogenyConfidentAssociation href "../PhylogenyConfidentAssociation"
       
 
-      Homoeology <|-- HomoeologyManualAnn
-        click HomoeologyManualAnn href "../HomoeologyManualAnn"
+      Homoeology <|-- HomoeologyAnn
+        click HomoeologyAnn href "../HomoeologyAnn"
       Homoeology <|-- HomoeologyTraitAssn
         click HomoeologyTraitAssn href "../HomoeologyTraitAssn"
       Homoeology <|-- HomoeologyTextMining
@@ -59,12 +59,11 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * **Homoeology** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-                * [HomoeologyManualAnn](HomoeologyManualAnn.md) [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
-                * [HomoeologyTraitAssn](HomoeologyTraitAssn.md) [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
-                * [HomoeologyTextMining](HomoeologyTextMining.md) [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * **Homoeology** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+            * [HomoeologyAnn](HomoeologyAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [HomoeologyTraitAssn](HomoeologyTraitAssn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+            * [HomoeologyTextMining](HomoeologyTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -85,13 +84,6 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
 
 
 
-
-
-### Annotations
-
-| property | value |
-| --- | --- |
-| associationStrength | 3.1 |
 
 
 
@@ -126,18 +118,14 @@ URI: [motif:Homoeology](https://knetminer.com/terms/motifs/motif-categories/Homo
 <details>
 ```yaml
 name: Homoeology
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 3.1
 description: "Associations related to homoeology. Homoeologs are pairs of genes that\
   \ originated by speciation \nand were brought back together in the same genome by\
   \ allopolyploidization (PMC4920642).\n\nAllopolyploidization is the formation of\
   \ new species through the combination of chromosomes from\ndifferent species.\n\n\
   Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.\n"
-title: Homoeology-related Association
+title: Homoeology
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Phylogeny
+is_a: PhylogenyConfidentAssociation
 abstract: true
 mixins:
 - IntraSpeciesAssociation
@@ -150,18 +138,14 @@ mixins:
 <details>
 ```yaml
 name: Homoeology
-annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 3.1
 description: "Associations related to homoeology. Homoeologs are pairs of genes that\
   \ originated by speciation \nand were brought back together in the same genome by\
   \ allopolyploidization (PMC4920642).\n\nAllopolyploidization is the formation of\
   \ new species through the combination of chromosomes from\ndifferent species.\n\n\
   Based on the meaning of the term, this class is made a subclass of 'IntraSpeciesAssociation'.\n"
-title: Homoeology-related Association
+title: Homoeology
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: Phylogeny
+is_a: PhylogenyConfidentAssociation
 abstract: true
 mixins:
 - IntraSpeciesAssociation

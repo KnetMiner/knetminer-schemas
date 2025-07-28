@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via homology and interaction (HomIntTraitAssn) 
+# Class: Homology Interaction Trait (HomIntTraitAssn) 
 
 
 _A gene-to-trait association based on homology._
@@ -22,8 +22,8 @@ URI: [motif:HomIntTraitAssn](https://knetminer.com/terms/motifs/motif-categories
  classDiagram
     class HomIntTraitAssn
     click HomIntTraitAssn href "../HomIntTraitAssn"
-      Gene2TraitAssociation <|-- HomIntTraitAssn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- HomIntTraitAssn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       HomologyInteraction <|-- HomIntTraitAssn
         click HomologyInteraction href "../HomologyInteraction"
       
@@ -36,11 +36,8 @@ URI: [motif:HomIntTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * [HomologyInteraction](HomologyInteraction.md)
-                    * **HomIntTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+    * [HomologyInteraction](HomologyInteraction.md)
+        * **HomIntTraitAssn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -109,13 +106,13 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology and interaction
+title: Homology Interaction Trait
 notes:
 - 'original category no: 5.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -132,13 +129,13 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology and interaction
+title: Homology Interaction Trait
 notes:
 - 'original category no: 5.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

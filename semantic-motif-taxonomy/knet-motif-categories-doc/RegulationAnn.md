@@ -1,9 +1,9 @@
 
 
-# Class: Manual Annotation about Gene Expression Regulation (RegulationManualAnn) 
+# Class: Expression Regulation Annotation (RegulationAnn) 
 
 
-_An association that represents a manual annotation based on gene expression regulation. _
+_A curated annotation based on gene expression regulation. _
 
 __
 
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-categories/RegulationManualAnn)
+URI: [motif:RegulationAnn](https://knetminer.com/terms/motifs/motif-categories/RegulationAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 ```mermaid
  classDiagram
-    class RegulationManualAnn
-    click RegulationManualAnn href "../RegulationManualAnn"
-      ManualAnnotationMethod <|-- RegulationManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      ExpressionRegulation <|-- RegulationManualAnn
+    class RegulationAnn
+    click RegulationAnn href "../RegulationAnn"
+      HasCuratedAnnotation <|-- RegulationAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      ExpressionRegulation <|-- RegulationAnn
         click ExpressionRegulation href "../ExpressionRegulation"
       
       
@@ -36,10 +36,9 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * [ExpressionRegulation](ExpressionRegulation.md)
-                * **RegulationManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * [ExpressionRegulation](ExpressionRegulation.md)
+            * **RegulationAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -83,8 +82,8 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:RegulationManualAnn |
-| native | motif:RegulationManualAnn |
+| self | motif:RegulationAnn |
+| native | motif:RegulationAnn |
 
 
 
@@ -100,20 +99,19 @@ URI: [motif:RegulationManualAnn](https://knetminer.com/terms/motifs/motif-catego
 
 <details>
 ```yaml
-name: RegulationManualAnn
+name: RegulationAnn
 annotations:
   originalCategory:
     tag: originalCategory
     value: expression::regulation::annotation
-description: "An association that represents a manual annotation based on gene expression\
-  \ regulation. \n"
-title: Manual Annotation about Gene Expression Regulation
+description: "A curated annotation based on gene expression regulation. \n"
+title: Expression Regulation Annotation
 notes:
 - 'original category no: 2.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -122,20 +120,19 @@ mixins:
 
 <details>
 ```yaml
-name: RegulationManualAnn
+name: RegulationAnn
 annotations:
   originalCategory:
     tag: originalCategory
     value: expression::regulation::annotation
-description: "An association that represents a manual annotation based on gene expression\
-  \ regulation. \n"
-title: Manual Annotation about Gene Expression Regulation
+description: "A curated annotation based on gene expression regulation. \n"
+title: Expression Regulation Annotation
 notes:
 - 'original category no: 2.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

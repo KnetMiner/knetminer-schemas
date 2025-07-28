@@ -1,6 +1,6 @@
 
 
-# Class: Manual Annotation via homology and interaction (HomIntManualAnn) 
+# Class: Homology Interaction Annotation (HomIntAnn) 
 
 
 _An association that represents a manual annotation based on homology and interaction._
@@ -11,7 +11,7 @@ __
 
 
 
-URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories/HomIntManualAnn)
+URI: [motif:HomIntAnn](https://knetminer.com/terms/motifs/motif-categories/HomIntAnn)
 
 
 
@@ -20,11 +20,11 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 ```mermaid
  classDiagram
-    class HomIntManualAnn
-    click HomIntManualAnn href "../HomIntManualAnn"
-      ManualAnnotationMethod <|-- HomIntManualAnn
-        click ManualAnnotationMethod href "../ManualAnnotationMethod"
-      HomologyInteraction <|-- HomIntManualAnn
+    class HomIntAnn
+    click HomIntAnn href "../HomIntAnn"
+      HasCuratedAnnotation <|-- HomIntAnn
+        click HasCuratedAnnotation href "../HasCuratedAnnotation"
+      HomologyInteraction <|-- HomIntAnn
         click HomologyInteraction href "../HomologyInteraction"
       
       
@@ -36,11 +36,8 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * [HomologyInteraction](HomologyInteraction.md)
-                    * **HomIntManualAnn** [ [ManualAnnotationMethod](ManualAnnotationMethod.md)]
+    * [HomologyInteraction](HomologyInteraction.md)
+        * **HomIntAnn** [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
 
 
 
@@ -84,8 +81,8 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | motif:HomIntManualAnn |
-| native | motif:HomIntManualAnn |
+| self | motif:HomIntAnn |
+| native | motif:HomIntAnn |
 
 
 
@@ -101,7 +98,7 @@ URI: [motif:HomIntManualAnn](https://knetminer.com/terms/motifs/motif-categories
 
 <details>
 ```yaml
-name: HomIntManualAnn
+name: HomIntAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -110,13 +107,13 @@ description: 'An association that represents a manual annotation based on homolo
   and interaction.
 
   '
-title: Manual Annotation via homology and interaction
+title: Homology Interaction Annotation
 notes:
 - 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>
@@ -125,7 +122,7 @@ mixins:
 
 <details>
 ```yaml
-name: HomIntManualAnn
+name: HomIntAnn
 annotations:
   originalCategory:
     tag: originalCategory
@@ -134,13 +131,13 @@ description: 'An association that represents a manual annotation based on homolo
   and interaction.
 
   '
-title: Manual Annotation via homology and interaction
+title: Homology Interaction Annotation
 notes:
 - 'original category no: 5.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- ManualAnnotationMethod
+- HasCuratedAnnotation
 
 ```
 </details>

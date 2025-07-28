@@ -1,9 +1,9 @@
 
 
-# Class: Text Mining Annotation about Physical Interaction (PhysInteractTextMining) 
+# Class: Physical Interaction Text Mining (PhysInteractTextMining) 
 
 
-_An association that represents a text mining annotation based on physical interaction._
+_A text mining annotation about on physical interaction._
 
 __
 
@@ -22,8 +22,8 @@ URI: [motif:PhysInteractTextMining](https://knetminer.com/terms/motifs/motif-cat
  classDiagram
     class PhysInteractTextMining
     click PhysInteractTextMining href "../PhysInteractTextMining"
-      TextMiningAnnotationMethod <|-- PhysInteractTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- PhysInteractTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       PhysicalInteraction <|-- PhysInteractTextMining
         click PhysicalInteraction href "../PhysicalInteraction"
       
@@ -36,9 +36,9 @@ URI: [motif:PhysInteractTextMining](https://knetminer.com/terms/motifs/motif-cat
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [PhysicalInteraction](PhysicalInteraction.md)
-            * **PhysInteractTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+            * **PhysInteractTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -104,17 +104,16 @@ annotations:
   originalCategory:
     tag: originalCategory
     value: interaction::physical::literature
-description: 'An association that represents a text mining annotation based on physical
-  interaction.
+description: 'A text mining annotation about on physical interaction.
 
   '
-title: Text Mining Annotation about Physical Interaction
+title: Physical Interaction Text Mining
 notes:
 - 'original category no: 2.8'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -128,17 +127,16 @@ annotations:
   originalCategory:
     tag: originalCategory
     value: interaction::physical::literature
-description: 'An association that represents a text mining annotation based on physical
-  interaction.
+description: 'A text mining annotation about on physical interaction.
 
   '
-title: Text Mining Annotation about Physical Interaction
+title: Physical Interaction Text Mining
 notes:
 - 'original category no: 2.8'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: PhysicalInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

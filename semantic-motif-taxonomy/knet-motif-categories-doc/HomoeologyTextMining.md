@@ -1,6 +1,6 @@
 
 
-# Class: Text Mining Annotation about Homoeology (HomoeologyTextMining) 
+# Class: Homoeology Text Mining (HomoeologyTextMining) 
 
 
 _An association that represents a text mining annotation based on homoeology._
@@ -22,8 +22,8 @@ URI: [motif:HomoeologyTextMining](https://knetminer.com/terms/motifs/motif-categ
  classDiagram
     class HomoeologyTextMining
     click HomoeologyTextMining href "../HomoeologyTextMining"
-      TextMiningAnnotationMethod <|-- HomoeologyTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- HomoeologyTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       Homoeology <|-- HomoeologyTextMining
         click Homoeology href "../Homoeology"
       
@@ -36,10 +36,9 @@ URI: [motif:HomoeologyTextMining](https://knetminer.com/terms/motifs/motif-categ
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-                * **HomoeologyTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [Homoeology](Homoeology.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+            * **HomoeologyTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -66,7 +65,6 @@ URI: [motif:HomoeologyTextMining](https://knetminer.com/terms/motifs/motif-categ
 
 | property | value |
 | --- | --- |
-| associationStrength | 3.2 |
 | originalCategory | phylogeny::homoeology::literature |
 
 
@@ -103,22 +101,19 @@ URI: [motif:HomoeologyTextMining](https://knetminer.com/terms/motifs/motif-categ
 ```yaml
 name: HomoeologyTextMining
 annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 3.2
   originalCategory:
     tag: originalCategory
     value: phylogeny::homoeology::literature
 description: 'An association that represents a text mining annotation based on homoeology.
 
   '
-title: Text Mining Annotation about Homoeology
+title: Homoeology Text Mining
 notes:
 - 'original category no: 3.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -129,22 +124,19 @@ mixins:
 ```yaml
 name: HomoeologyTextMining
 annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 3.2
   originalCategory:
     tag: originalCategory
     value: phylogeny::homoeology::literature
 description: 'An association that represents a text mining annotation based on homoeology.
 
   '
-title: Text Mining Annotation about Homoeology
+title: Homoeology Text Mining
 notes:
 - 'original category no: 3.6'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homoeology
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

@@ -1,6 +1,6 @@
 
 
-# Class: Association based on Differential Gene Expression (DifferentialExpression) 
+# Class: Differential Expression (DifferentialExpression) 
 
 
 _A variant of the `GeneExpression` category, to specifically state that an association is based_
@@ -38,9 +38,8 @@ URI: [motif:DifferentialExpression](https://knetminer.com/terms/motifs/motif-cat
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * **DifferentialExpression**
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * **DifferentialExpression**
 
 
 
@@ -115,7 +114,7 @@ description: 'A variant of the `GeneExpression` category, to specifically state 
   experiment.
 
   '
-title: Association based on Differential Gene Expression
+title: Differential Expression
 notes:
 - 'original category no: 2.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
@@ -142,7 +141,7 @@ description: 'A variant of the `GeneExpression` category, to specifically state 
   experiment.
 
   '
-title: Association based on Differential Gene Expression
+title: Differential Expression
 notes:
 - 'original category no: 2.1'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema

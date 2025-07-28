@@ -24,12 +24,16 @@ URI: [motif:SemanticMotifCategory](https://knetminer.com/terms/motifs/motif-cate
  classDiagram
     class SemanticMotifCategory
     click SemanticMotifCategory href "../SemanticMotifCategory"
-      SemanticMotifCategory <|-- AssociationStrength
-        click AssociationStrength href "../AssociationStrength"
-      SemanticMotifCategory <|-- BiologicalTopic
-        click BiologicalTopic href "../BiologicalTopic"
-      SemanticMotifCategory <|-- AnnotationMethod
-        click AnnotationMethod href "../AnnotationMethod"
+      SemanticMotifCategory <|-- IntraSpeciesAnnotation
+        click IntraSpeciesAnnotation href "../IntraSpeciesAnnotation"
+      SemanticMotifCategory <|-- BioMolecularInteraction
+        click BioMolecularInteraction href "../BioMolecularInteraction"
+      SemanticMotifCategory <|-- GeneExpression
+        click GeneExpression href "../GeneExpression"
+      SemanticMotifCategory <|-- PhylogenyConfidentAssociation
+        click PhylogenyConfidentAssociation href "../PhylogenyConfidentAssociation"
+      SemanticMotifCategory <|-- HomologyInteraction
+        click HomologyInteraction href "../HomologyInteraction"
       
       
 ```
@@ -40,9 +44,11 @@ URI: [motif:SemanticMotifCategory](https://knetminer.com/terms/motifs/motif-cate
 
 ## Inheritance
 * **SemanticMotifCategory**
-    * [AssociationStrength](AssociationStrength.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-    * [AnnotationMethod](AnnotationMethod.md)
+    * [IntraSpeciesAnnotation](IntraSpeciesAnnotation.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+    * [HomologyInteraction](HomologyInteraction.md)
 
 
 

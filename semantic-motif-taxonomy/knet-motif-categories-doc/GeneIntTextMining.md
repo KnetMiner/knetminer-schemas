@@ -1,6 +1,6 @@
 
 
-# Class: Text Mining Annotation about Gene-Gene Interaction (GeneIntTextMining) 
+# Class: Gene-Gene Interaction Text Mining (GeneIntTextMining) 
 
 
 _An association that represents a text mining annotation based on gene-gene interaction._
@@ -22,8 +22,8 @@ URI: [motif:GeneIntTextMining](https://knetminer.com/terms/motifs/motif-categori
  classDiagram
     class GeneIntTextMining
     click GeneIntTextMining href "../GeneIntTextMining"
-      TextMiningAnnotationMethod <|-- GeneIntTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- GeneIntTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       GeneGeneInteraction <|-- GeneIntTextMining
         click GeneGeneInteraction href "../GeneGeneInteraction"
       
@@ -36,9 +36,9 @@ URI: [motif:GeneIntTextMining](https://knetminer.com/terms/motifs/motif-categori
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
+    * [BioMolecularInteraction](BioMolecularInteraction.md)
         * [GeneGeneInteraction](GeneGeneInteraction.md)
-            * **GeneIntTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+            * **GeneIntTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -108,13 +108,13 @@ description: 'An association that represents a text mining annotation based on g
   interaction.
 
   '
-title: Text Mining Annotation about Gene-Gene Interaction
+title: Gene-Gene Interaction Text Mining
 notes:
 - 'original category no: 2.11'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -132,13 +132,13 @@ description: 'An association that represents a text mining annotation based on g
   interaction.
 
   '
-title: Text Mining Annotation about Gene-Gene Interaction
+title: Gene-Gene Interaction Text Mining
 notes:
 - 'original category no: 2.11'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: GeneGeneInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

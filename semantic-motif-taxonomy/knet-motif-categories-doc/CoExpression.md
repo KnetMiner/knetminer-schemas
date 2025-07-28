@@ -1,6 +1,6 @@
 
 
-# Class: Association about Co-expression of genes (CoExpression) 
+# Class: Co-expression (CoExpression) 
 
 
 _A gene expression association based on the fact that two (or more genes) are similarly expressed_
@@ -36,9 +36,8 @@ URI: [motif:CoExpression](https://knetminer.com/terms/motifs/motif-categories/Co
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * **CoExpression**
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * **CoExpression**
 
 
 
@@ -110,7 +109,7 @@ description: 'A gene expression association based on the fact that two (or more 
   under similar conditions.
 
   '
-title: Association about Co-expression of genes
+title: Co-expression
 notes:
 - 'original category no: 2.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
@@ -134,7 +133,7 @@ description: 'A gene expression association based on the fact that two (or more 
   under similar conditions.
 
   '
-title: Association about Co-expression of genes
+title: Co-expression
 notes:
 - 'original category no: 2.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema

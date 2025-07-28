@@ -1,6 +1,6 @@
 
 
-# Class: Gene-to-Trait Association via homology (HomologyTraitAssn) 
+# Class: Homology Trait (HomologyTraitAssn) 
 
 
 _A gene-to-trait association based on homology._
@@ -22,8 +22,8 @@ URI: [motif:HomologyTraitAssn](https://knetminer.com/terms/motifs/motif-categori
  classDiagram
     class HomologyTraitAssn
     click HomologyTraitAssn href "../HomologyTraitAssn"
-      Gene2TraitAssociation <|-- HomologyTraitAssn
-        click Gene2TraitAssociation href "../Gene2TraitAssociation"
+      HasGeneTraitAssociation <|-- HomologyTraitAssn
+        click HasGeneTraitAssociation href "../HasGeneTraitAssociation"
       Homology <|-- HomologyTraitAssn
         click Homology href "../Homology"
       
@@ -36,10 +36,9 @@ URI: [motif:HomologyTraitAssn](https://knetminer.com/terms/motifs/motif-categori
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * **HomologyTraitAssn** [ [Gene2TraitAssociation](Gene2TraitAssociation.md)]
+    * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
+        * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
+            * **HomologyTraitAssn** [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 
@@ -108,13 +107,13 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology
+title: Homology Trait
 notes:
 - 'original category no: 3.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>
@@ -131,13 +130,13 @@ annotations:
 description: 'A gene-to-trait association based on homology.
 
   '
-title: Gene-to-Trait Association via homology
+title: Homology Trait
 notes:
 - 'original category no: 3.2'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: Homology
 mixins:
-- Gene2TraitAssociation
+- HasGeneTraitAssociation
 
 ```
 </details>

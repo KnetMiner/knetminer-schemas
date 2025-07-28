@@ -1,6 +1,6 @@
 
 
-# Class: Text Mining Annotation via homology and interaction (HomIntTextMining) 
+# Class: Homology Interaction Text Mining (HomIntTextMining) 
 
 
 _An association that represents a text mining annotation based on homology and interaction._
@@ -22,8 +22,8 @@ URI: [motif:HomIntTextMining](https://knetminer.com/terms/motifs/motif-categorie
  classDiagram
     class HomIntTextMining
     click HomIntTextMining href "../HomIntTextMining"
-      TextMiningAnnotationMethod <|-- HomIntTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- HomIntTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       HomologyInteraction <|-- HomIntTextMining
         click HomologyInteraction href "../HomologyInteraction"
       
@@ -36,11 +36,8 @@ URI: [motif:HomIntTextMining](https://knetminer.com/terms/motifs/motif-categorie
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [Phylogeny](Phylogeny.md)
-            * [Homology](Homology.md) [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-                * [HomologyInteraction](HomologyInteraction.md)
-                    * **HomIntTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [HomologyInteraction](HomologyInteraction.md)
+        * **HomIntTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -110,13 +107,13 @@ description: 'An association that represents a text mining annotation based on h
   and interaction.
 
   '
-title: Text Mining Annotation via homology and interaction
+title: Homology Interaction Text Mining
 notes:
 - 'original category no: 5.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -134,13 +131,13 @@ description: 'An association that represents a text mining annotation based on h
   and interaction.
 
   '
-title: Text Mining Annotation via homology and interaction
+title: Homology Interaction Text Mining
 notes:
 - 'original category no: 5.3'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: HomologyInteraction
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

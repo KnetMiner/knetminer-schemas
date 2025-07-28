@@ -1,6 +1,6 @@
 
 
-# Class: Text Mining Annotation about Gene Expression Regulation (RegulationTextMining) 
+# Class: Expression Regulation Text Mining (RegulationTextMining) 
 
 
 _An association that represents a text mining annotation based on gene expression regulation._
@@ -22,8 +22,8 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
  classDiagram
     class RegulationTextMining
     click RegulationTextMining href "../RegulationTextMining"
-      TextMiningAnnotationMethod <|-- RegulationTextMining
-        click TextMiningAnnotationMethod href "../TextMiningAnnotationMethod"
+      HasTextMiningAnnotation <|-- RegulationTextMining
+        click HasTextMiningAnnotation href "../HasTextMiningAnnotation"
       ExpressionRegulation <|-- RegulationTextMining
         click ExpressionRegulation href "../ExpressionRegulation"
       
@@ -36,10 +36,9 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * [ExpressionRegulation](ExpressionRegulation.md)
-                * **RegulationTextMining** [ [TextMiningAnnotationMethod](TextMiningAnnotationMethod.md)]
+    * [GeneExpression](GeneExpression.md) [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * [ExpressionRegulation](ExpressionRegulation.md)
+            * **RegulationTextMining** [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 
 
 
@@ -66,7 +65,6 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 
 | property | value |
 | --- | --- |
-| associationStrength | 2.1 |
 | originalCategory | expression::regulation::literature |
 
 
@@ -103,9 +101,6 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 ```yaml
 name: RegulationTextMining
 annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 2.1
   originalCategory:
     tag: originalCategory
     value: expression::regulation::literature
@@ -113,13 +108,13 @@ description: 'An association that represents a text mining annotation based on g
   expression regulation.
 
   '
-title: Text Mining Annotation about Gene Expression Regulation
+title: Expression Regulation Text Mining
 notes:
 - 'original category no: 2.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>
@@ -130,9 +125,6 @@ mixins:
 ```yaml
 name: RegulationTextMining
 annotations:
-  associationStrength:
-    tag: associationStrength
-    value: 2.1
   originalCategory:
     tag: originalCategory
     value: expression::regulation::literature
@@ -140,13 +132,13 @@ description: 'An association that represents a text mining annotation based on g
   expression regulation.
 
   '
-title: Text Mining Annotation about Gene Expression Regulation
+title: Expression Regulation Text Mining
 notes:
 - 'original category no: 2.5'
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: ExpressionRegulation
 mixins:
-- TextMiningAnnotationMethod
+- HasTextMiningAnnotation
 
 ```
 </details>

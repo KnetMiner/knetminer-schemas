@@ -1,6 +1,6 @@
 
 
-# Class: Gene Expression-Related Association (GeneExpression) 
+# Class: Gene Expression (GeneExpression) 
 
 
 _Associations of this type are related to gene expression, for instance because it's the mean used_
@@ -28,8 +28,8 @@ URI: [motif:GeneExpression](https://knetminer.com/terms/motifs/motif-categories/
     click GeneExpression href "../GeneExpression"
       IntraSpeciesAssociation <|-- GeneExpression
         click IntraSpeciesAssociation href "../IntraSpeciesAssociation"
-      BiologicalTopic <|-- GeneExpression
-        click BiologicalTopic href "../BiologicalTopic"
+      SemanticMotifCategory <|-- GeneExpression
+        click SemanticMotifCategory href "../SemanticMotifCategory"
       
 
       GeneExpression <|-- DifferentialExpression
@@ -49,11 +49,10 @@ URI: [motif:GeneExpression](https://knetminer.com/terms/motifs/motif-categories/
 
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
-    * [BiologicalTopic](BiologicalTopic.md)
-        * **GeneExpression** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-            * [DifferentialExpression](DifferentialExpression.md)
-            * [CoExpression](CoExpression.md)
-            * [ExpressionRegulation](ExpressionRegulation.md)
+    * **GeneExpression** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
+        * [DifferentialExpression](DifferentialExpression.md)
+        * [CoExpression](CoExpression.md)
+        * [ExpressionRegulation](ExpressionRegulation.md)
 
 
 
@@ -114,9 +113,9 @@ description: 'Associations of this type are related to gene expression, for inst
   to predict the function of a gene.
 
   '
-title: Gene Expression-Related Association
+title: Gene Expression
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: SemanticMotifCategory
 abstract: true
 mixins:
 - IntraSpeciesAssociation
@@ -135,9 +134,9 @@ description: 'Associations of this type are related to gene expression, for inst
   to predict the function of a gene.
 
   '
-title: Gene Expression-Related Association
+title: Gene Expression
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
-is_a: BiologicalTopic
+is_a: SemanticMotifCategory
 abstract: true
 mixins:
 - IntraSpeciesAssociation
