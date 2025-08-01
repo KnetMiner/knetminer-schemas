@@ -43,7 +43,7 @@ classes:
     mixins:
     - IntraSpeciesAssociation
 
-  CuratedAnn:
+  InstraSpeciesCuratedAnn:
     is_a: IntraSpeciesAnnotation
     title: Direct Annotation
     description: |
@@ -53,7 +53,9 @@ classes:
     notes:
       - "original category no: 1.1"
     annotations:
-      originalCategory: "direct::annotation"
+      originalCategories:
+      - "direct::annotation"
+      - ManualAnnotation
 
   IntraSpeciesTextMiningAnn:
     is_a: IntraSpeciesAnnotation
@@ -66,9 +68,11 @@ classes:
     notes:
       - "original category no: 1.3"
     annotations:
-      originalCategory: "direct::literature"
+      originalCategories:
+      - "direct::literature"
+      - TextMiningAnnotation
 
-  IntraTraitAnn:
+  IntraSpeciesTraitAnn:
     is_a: IntraSpeciesAnnotation
     title: Gene-Trait Annotation
     description: |
@@ -79,7 +83,9 @@ classes:
     notes:
       - "original category no: 1.2"
     annotations:
-      originalCategory: "direct::genetics"
+      originalCategories:
+      - "direct::genetics"
+      - IntraTraitAssn
 
 
 
@@ -110,7 +116,9 @@ classes:
     notes:
       - "original category no: 2.6"
     annotations:
-      originalCategory: "interaction::physical::annotation"
+      originalCategories:
+      - "interaction::physical::annotation"
+      - PhysInteractManualAnn
 
   PhysInteractTraitAssn:
     is_a: PhysicalInteraction
@@ -154,7 +162,9 @@ classes:
     notes:
       - "original category no: 2.9"
     annotations:
-      originalCategory: "interaction::genetic::annotation"
+      originalCategories:
+      - "interaction::genetic::annotation"
+      - GeneIntManualAnn
 
   GeneIntTraitAnn:
     is_a: GeneGeneInteraction
@@ -235,7 +245,9 @@ classes:
     notes:
       - "original category no: 2.3"
     annotations:
-      originalCategory: "expression::regulation::annotation"
+      originalCategories:
+      - "expression::regulation::annotation"
+      - RegulationManualAnn
 
   RegulationTraitAssn:
     is_a: ExpressionRegulation
@@ -302,7 +314,9 @@ classes:
     notes:
       - "original category no: 3.4"
     annotations:
-      originalCategory: "phylogeny::homoeology::annotation"
+      originalCategories:
+      - "phylogeny::homoeology::annotation"
+      - HomoeologyManualAnn
 
   HomoeologyTraitAssn:
     is_a: Homoeology
@@ -340,7 +354,7 @@ classes:
     mixins:
       - CrossSpeciesAssociation
     
-  HomologyManualAnn:
+  HomologyAnn:
     is_a: Homology
     title: Homology Annotation
     description: |
@@ -350,7 +364,9 @@ classes:
     notes:
       - "original category no: 3.1"
     annotations:
-      originalCategory: "phylogeny::homology::annotation"
+      originalCategories:
+      - "phylogeny::homology::annotation"
+      - HomologyManualAnn
 
   HomologyTraitAssn:
     is_a: Homology
@@ -397,7 +413,9 @@ classes:
     notes:
       - "original category no: 4.1"
     annotations:
-      originalCategory: "phylogeny::similarity::annotation"
+      originalCategories:
+      - "phylogeny::similarity::annotation"
+      - SeqSimManualAnn
 
   SeqSimTextMining:
     is_a: SequenceSimilarity
@@ -435,7 +453,9 @@ classes:
     notes:
       - "original category no: 5.1"
     annotations:
-      originalCategory: "homint::annotation"
+      originalCategories:
+      - "homint::annotation"
+      - HomIntManualAnn
 
   HomIntTraitAssn:
     is_a: HomologyInteraction
