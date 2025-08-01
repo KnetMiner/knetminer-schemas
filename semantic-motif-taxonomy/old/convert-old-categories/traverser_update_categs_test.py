@@ -29,21 +29,23 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
         return temp_file.name
     
     def test_extract_basic_mapping(self):
-        """Test basic extraction of originalCategory mappings"""
+        """Test basic extraction of originalCategories mappings"""
         yaml_content = """
           classes:
             CoExpression:
               annotations:
-                originalCategory: "expression::coexpression"
+                originalCategories:
+                  - "expression::coexpression"
               description: "Co-expression relationship"
             
             GeneOntology:
               annotations:
-                originalCategory: "ontology::go"
+                originalCategories:
+                  - "ontology::go"
               description: "Gene Ontology term"
             
             RegularClass:
-              description: "Class without originalCategory annotation"
+              description: "Class without originalCategories annotation"
           """
         
         temp_file = self.create_temp_yaml(yaml_content)
@@ -69,7 +71,7 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
         self.assertEqual(result, {})
     
     def test_extract_no_original_categories(self):
-        """Test handling of classes without originalCategory annotations"""
+        """Test handling of classes without originalCategories annotations"""
         yaml_content = """
           classes:
             RegularClass1:
@@ -87,12 +89,14 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
         self.assertEqual(result, {})
     
     def test_duplicate_original_category_same_class(self):
-        """Test that duplicate originalCategory with same class name doesn't raise error"""
+        """Test that duplicate originalCategories with same class name doesn't raise error"""
         yaml_content = """
           classes:
             CoExpression:
               annotations:
-                originalCategory: "expression::coexpression"
+                originalCategories:
+                  - "expression::coexpression"
+                  - "expression::coexpression"
               description: "Co-expression relationship"
           """
         
@@ -104,18 +108,20 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
         self.assertEqual(result, expected)
     
     def test_duplicate_original_category_different_class(self):
-        """Test that duplicate originalCategory with different class names raises ValueError"""
+        """Test that duplicate originalCategories with different class names raises ValueError"""
         yaml_content = """
           classes:
             CoExpression:
               annotations:
-                originalCategory: "expression::coexpression"
+                originalCategories:
+                  - "expression::coexpression"
               description: "Co-expression relationship"
             
             AnotherClass:
               annotations:
-                originalCategory: "expression::coexpression"
-              description: "Another class with same originalCategory"
+                originalCategories:
+                  - "expression::coexpression"
+              description: "Another class with same originalCategories"
           """
         
         temp_file = self.create_temp_yaml(yaml_content)

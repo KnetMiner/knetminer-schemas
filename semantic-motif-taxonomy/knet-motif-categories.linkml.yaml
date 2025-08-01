@@ -7,8 +7,12 @@ version: 1.0-SNAPSHOT
 
 notes:
   - |
-    The annotations "original category no" and "originalCategory:" refer to the
-    initial Google Doc specification from which this file was defined. 
+    The annotations "original category no" and `originalCategories:` refer either to the
+    initial Google Doc specification from which this file was defined, or to previous
+    identifiers used for the same class.
+    
+    `originalCategories` is used to script updates of files that refers to thes ID.
+    
     TODO: to be deleted in future.
 
 prefixes:
@@ -130,7 +134,8 @@ classes:
     notes:
       - "original category no: 2.7"
     annotations:
-      originalCategory: "interaction::physical::genetics"
+      originalCategories:
+      - "interaction::physical::genetics"
 
   PhysInteractTextMining:
     is_a: PhysicalInteraction
@@ -142,7 +147,8 @@ classes:
     notes:
       - "original category no: 2.8"
     annotations:
-      originalCategory: "interaction::physical::literature"
+      originalCategories:
+      - "interaction::physical::literature"
 
   GeneGeneInteraction:
     is_a: BioMolecularInteraction
@@ -176,7 +182,8 @@ classes:
     notes:
       - "original category no: 2.10"
     annotations:
-      originalCategory: "interaction::genetic::genetics"
+      originalCategories:
+      - "interaction::genetic::genetics"
 
   GeneIntTextMining:
     is_a: GeneGeneInteraction
@@ -188,7 +195,8 @@ classes:
     notes:
       - "original category no: 2.11"
     annotations:
-      originalCategory: "interaction::genetic::literature"
+      originalCategories:
+      - "interaction::genetic::literature"
 
 
 
@@ -214,7 +222,8 @@ classes:
     notes:
       - "original category no: 2.1"
     annotations:
-      originalCategory: "expression::differential"
+      originalCategories:
+      - "expression::differential"
 
   CoExpression:
     is_a: GeneExpression
@@ -225,7 +234,8 @@ classes:
     notes:
       - "original category no: 2.2"
     annotations:
-      originalCategory: "expression::coexpression"
+      originalCategories:
+      - "expression::coexpression"
 
   ExpressionRegulation:
     is_a: GeneExpression
@@ -259,7 +269,8 @@ classes:
     notes:
       - "original category no: 2.4"
     annotations:
-      originalCategory: "expression::regulation::genetics"
+      originalCategories:
+      - "expression::regulation::genetics"
 
   RegulationTextMining:
     is_a: ExpressionRegulation
@@ -271,7 +282,8 @@ classes:
     notes:
       - "original category no: 2.5"
     annotations:
-      originalCategory: "expression::regulation::literature"
+      originalCategories:
+      - "expression::regulation::literature"
 
 
 
@@ -328,7 +340,8 @@ classes:
     notes:
       - "original category no: 3.5"
     annotations:
-      originalCategory: "phylogeny::homoeology::genetics"
+      originalCategories:
+      - "phylogeny::homoeology::genetics"
 
   HomoeologyTextMining:
     is_a: Homoeology
@@ -340,7 +353,8 @@ classes:
     notes:
       - "original category no: 3.6"
     annotations:
-      originalCategory: "phylogeny::homoeology::literature"
+      originalCategories:
+      - "phylogeny::homoeology::literature"
 
 
   Homology:
@@ -378,7 +392,8 @@ classes:
     notes:
       - "original category no: 3.2"
     annotations:
-      originalCategory: "phylogeny::homology::genetics"
+      originalCategories:
+      - "phylogeny::homology::genetics"
 
   HomologyTextMining:
     is_a: Homology
@@ -390,7 +405,8 @@ classes:
     notes:
       - "original category no: 3.3"
     annotations:
-      originalCategory: "phylogeny::homology::literature"
+      originalCategories:
+      - "phylogeny::homology::literature"
 
 
   SequenceSimilarity:
@@ -427,7 +443,8 @@ classes:
     notes:
       - "original category no: 4.2"
     annotations:
-      originalCategory: "phylogeny::similarity::literature"
+      originalCategories:
+      - "phylogeny::similarity::literature"
 
 
 
@@ -467,7 +484,8 @@ classes:
     notes:
       - "original category no: 5.2"
     annotations:
-      originalCategory: "homint::genetics"
+      originalCategories:
+      - "homint::genetics"
 
   HomIntTextMining:
     is_a: HomologyInteraction
@@ -479,7 +497,8 @@ classes:
     notes:
       - "original category no: 5.3"
     annotations:
-      originalCategory: "homint::literature"
+      originalCategories:
+      - "homint::literature"
 
 
 

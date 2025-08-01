@@ -6,16 +6,16 @@ from typing import Dict
 def extract_original_category_mapping(schema_file_path: str) -> Dict[str, str]:
 	"""
 	Scans LinkML schema class definitions and builds a dictionary mapping
-	originalCategory annotation values to class names.
+	originalCategories annotation values to class names.
 	
 	Args:
 		schema_file_path: Path to the LinkML YAML schema file
 		
 	Returns:
-		Dictionary where keys are originalCategory values and values are class names
+		Dictionary where keys are originalCategories values and values are class names
 		
 	Raises:
-		ValueError: If duplicate originalCategory values are found with different class names
+		ValueError: If duplicate originalCategories values are found with different class names
 	"""
 	
 	# Load YAML file directly
@@ -32,20 +32,28 @@ def extract_original_category_mapping(schema_file_path: str) -> Dict[str, str]:
 		# Check if the class has annotations
 		annotations = class_def.get('annotations', {})
 		
-		if 'originalCategory' in annotations:
-			original_category_value = annotations['originalCategory']
+		if 'originalCategories' in annotations:
+			original_categories_values = annotations['originalCategories']
 			
-			# Check for duplicates
-			if original_category_value in original_category_mapping:
-				existing_class = original_category_mapping[original_category_value]
-				if existing_class != class_name:
-					raise ValueError(
-						f"Duplicate originalCategory '{original_category_value}' found: "
-						f"'{existing_class}' and '{class_name}'"
-					)
+			# Ensure it's a list
+			if not isinstance(original_categories_values, list):
+				raise ValueError(
+					f"'originalCategories' for class '{class_name}' must be a list, found: {type(original_categories_values)}"
+				)
 			
-			# Add to mapping
-			original_category_mapping[original_category_value] = class_name
+			# Add each category to the mapping
+			for original_category_value in original_categories_values:
+				# Check for duplicates
+				if original_category_value in original_category_mapping:
+					existing_class = original_category_mapping[original_category_value]
+					if existing_class != class_name:
+						raise ValueError(
+							f"Duplicate originalCategory '{original_category_value}' found: "
+							f"'{existing_class}' and '{class_name}'"
+						)
+				
+				# Add to mapping
+				original_category_mapping[original_category_value] = class_name
 	
 	return original_category_mapping
 
