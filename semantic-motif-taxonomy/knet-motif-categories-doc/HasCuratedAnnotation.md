@@ -28,8 +28,8 @@ URI: [motif:HasCuratedAnnotation](https://knetminer.com/terms/motifs/motif-categ
         click SemanticMotifQualifier href "../SemanticMotifQualifier"
       
 
-      HasCuratedAnnotation <|-- CuratedAnn
-        click CuratedAnn href "../CuratedAnn"
+      HasCuratedAnnotation <|-- InstraSpeciesCuratedAnn
+        click InstraSpeciesCuratedAnn href "../InstraSpeciesCuratedAnn"
       HasCuratedAnnotation <|-- PhysInteractAnn
         click PhysInteractAnn href "../PhysInteractAnn"
       HasCuratedAnnotation <|-- GeneIntAnn
@@ -38,8 +38,8 @@ URI: [motif:HasCuratedAnnotation](https://knetminer.com/terms/motifs/motif-categ
         click RegulationAnn href "../RegulationAnn"
       HasCuratedAnnotation <|-- HomoeologyAnn
         click HomoeologyAnn href "../HomoeologyAnn"
-      HasCuratedAnnotation <|-- HomologyManualAnn
-        click HomologyManualAnn href "../HomologyManualAnn"
+      HasCuratedAnnotation <|-- HomologyAnn
+        click HomologyAnn href "../HomologyAnn"
       HasCuratedAnnotation <|-- SeqSimAnn
         click SeqSimAnn href "../SeqSimAnn"
       HasCuratedAnnotation <|-- HomIntAnn
@@ -70,12 +70,12 @@ URI: [motif:HasCuratedAnnotation](https://knetminer.com/terms/motifs/motif-categ
 
 | mixed into | description |
 | --- | --- |
-| [CuratedAnn](CuratedAnn.md) | Intra-species direct annotation, provided by a curator or expert |
+| [InstraSpeciesCuratedAnn](InstraSpeciesCuratedAnn.md) | Intra-species direct annotation, provided by a curator or expert |
 | [PhysInteractAnn](PhysInteractAnn.md) | A curated annotation about physical interaction |
 | [GeneIntAnn](GeneIntAnn.md) | An association that represents a manual annotation based on gene-gene interac... |
 | [RegulationAnn](RegulationAnn.md) | A curated annotation based on gene expression regulation |
 | [HomoeologyAnn](HomoeologyAnn.md) | An association that represents a manual annotation based on homoeology |
-| [HomologyManualAnn](HomologyManualAnn.md) | An association that represents a manual annotation based on homology |
+| [HomologyAnn](HomologyAnn.md) | An association that represents a manual annotation based on homology |
 | [SeqSimAnn](SeqSimAnn.md) | An association that represents a manual annotation based on sequence similari... |
 | [HomIntAnn](HomIntAnn.md) | An association that represents a manual annotation based on homology and inte... |
 

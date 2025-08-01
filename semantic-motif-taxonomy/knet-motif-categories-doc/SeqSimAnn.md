@@ -65,7 +65,7 @@ URI: [motif:SeqSimAnn](https://knetminer.com/terms/motifs/motif-categories/SeqSi
 
 | property | value |
 | --- | --- |
-| originalCategory | phylogeny::similarity::annotation |
+| originalCategories | phylogeny::similarity::annotation, SeqSimManualAnn |
 
 
 
@@ -101,9 +101,9 @@ URI: [motif:SeqSimAnn](https://knetminer.com/terms/motifs/motif-categories/SeqSi
 ```yaml
 name: SeqSimAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: phylogeny::similarity::annotation
+  originalCategories:
+    tag: originalCategories
+    value: phylogeny::similarity::annotation, SeqSimManualAnn
 description: 'An association that represents a manual annotation based on sequence
   similarity.
 
@@ -125,9 +125,9 @@ mixins:
 ```yaml
 name: SeqSimAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: phylogeny::similarity::annotation
+  originalCategories:
+    tag: originalCategories
+    value: phylogeny::similarity::annotation, SeqSimManualAnn
 description: 'An association that represents a manual annotation based on sequence
   similarity.
 

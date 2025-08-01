@@ -65,7 +65,7 @@ URI: [motif:SeqSimTextMining](https://knetminer.com/terms/motifs/motif-categorie
 
 | property | value |
 | --- | --- |
-| originalCategory | phylogeny::similarity::literature |
+| originalCategories | phylogeny::similarity::literature |
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:SeqSimTextMining](https://knetminer.com/terms/motifs/motif-categorie
 ```yaml
 name: SeqSimTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: phylogeny::similarity::literature
 description: 'An association that represents a text mining annotation based on sequence
   similarity.
@@ -125,8 +125,8 @@ mixins:
 ```yaml
 name: SeqSimTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: phylogeny::similarity::literature
 description: 'An association that represents a text mining annotation based on sequence
   similarity.

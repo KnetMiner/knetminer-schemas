@@ -32,8 +32,8 @@ URI: [motif:HasGeneTraitAssociation](https://knetminer.com/terms/motifs/motif-ca
         click SemanticMotifQualifier href "../SemanticMotifQualifier"
       
 
-      HasGeneTraitAssociation <|-- IntraTraitAnn
-        click IntraTraitAnn href "../IntraTraitAnn"
+      HasGeneTraitAssociation <|-- IntraSpeciesTraitAnn
+        click IntraSpeciesTraitAnn href "../IntraSpeciesTraitAnn"
       HasGeneTraitAssociation <|-- PhysInteractTraitAssn
         click PhysInteractTraitAssn href "../PhysInteractTraitAssn"
       HasGeneTraitAssociation <|-- GeneIntTraitAnn
@@ -72,7 +72,7 @@ URI: [motif:HasGeneTraitAssociation](https://knetminer.com/terms/motifs/motif-ca
 
 | mixed into | description |
 | --- | --- |
-| [IntraTraitAnn](IntraTraitAnn.md) | A gene-trait annotation that is established with information and methods with... |
+| [IntraSpeciesTraitAnn](IntraSpeciesTraitAnn.md) | A gene-trait annotation that is established with information and methods with... |
 | [PhysInteractTraitAssn](PhysInteractTraitAssn.md) | A gene-to-trait association based on physical interaction |
 | [GeneIntTraitAnn](GeneIntTraitAnn.md) | A gene-to-trait association based on gene-gene interaction |
 | [RegulationTraitAssn](RegulationTraitAssn.md) | A gene-to-trait association based on gene expression regulation |

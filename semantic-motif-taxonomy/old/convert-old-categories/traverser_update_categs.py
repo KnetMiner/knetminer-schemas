@@ -33,13 +33,16 @@ def extract_original_category_mapping(schema_file_path: str) -> Dict[str, str]:
 		annotations = class_def.get('annotations', {})
 		
 		if 'originalCategories' in annotations:
-			original_categories_values = annotations['originalCategories']
+			original_categories_value = annotations['originalCategories']
 			
-			# Ensure it's a list
-			if not isinstance(original_categories_values, list):
+			# Ensure it's a string
+			if not isinstance(original_categories_value, str):
 				raise ValueError(
-					f"'originalCategories' for class '{class_name}' must be a list, found: {type(original_categories_values)}"
+					f"'originalCategories' for class '{class_name}' must be a string, found: {type(original_categories_value)}"
 				)
+			
+			# Split the string into individual categories
+			original_categories_values = [cat.strip() for cat in original_categories_value.split(",")]
 			
 			# Add each category to the mapping
 			for original_category_value in original_categories_values:

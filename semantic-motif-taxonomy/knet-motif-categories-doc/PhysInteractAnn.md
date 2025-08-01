@@ -65,7 +65,7 @@ URI: [motif:PhysInteractAnn](https://knetminer.com/terms/motifs/motif-categories
 
 | property | value |
 | --- | --- |
-| originalCategory | interaction::physical::annotation |
+| originalCategories | interaction::physical::annotation, PhysInteractManualAnn |
 
 
 
@@ -101,9 +101,9 @@ URI: [motif:PhysInteractAnn](https://knetminer.com/terms/motifs/motif-categories
 ```yaml
 name: PhysInteractAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: interaction::physical::annotation
+  originalCategories:
+    tag: originalCategories
+    value: interaction::physical::annotation, PhysInteractManualAnn
 description: 'A curated annotation about physical interaction.
 
   '
@@ -124,9 +124,9 @@ mixins:
 ```yaml
 name: PhysInteractAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: interaction::physical::annotation
+  originalCategories:
+    tag: originalCategories
+    value: interaction::physical::annotation, PhysInteractManualAnn
 description: 'A curated annotation about physical interaction.
 
   '

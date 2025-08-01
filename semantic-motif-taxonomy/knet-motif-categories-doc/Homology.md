@@ -34,8 +34,8 @@ URI: [motif:Homology](https://knetminer.com/terms/motifs/motif-categories/Homolo
         click PhylogenyConfidentAssociation href "../PhylogenyConfidentAssociation"
       
 
-      Homology <|-- HomologyManualAnn
-        click HomologyManualAnn href "../HomologyManualAnn"
+      Homology <|-- HomologyAnn
+        click HomologyAnn href "../HomologyAnn"
       Homology <|-- HomologyTraitAssn
         click HomologyTraitAssn href "../HomologyTraitAssn"
       Homology <|-- HomologyTextMining
@@ -53,7 +53,7 @@ URI: [motif:Homology](https://knetminer.com/terms/motifs/motif-categories/Homolo
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * [PhylogenyConfidentAssociation](PhylogenyConfidentAssociation.md)
         * **Homology** [ [CrossSpeciesAssociation](CrossSpeciesAssociation.md)]
-            * [HomologyManualAnn](HomologyManualAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+            * [HomologyAnn](HomologyAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
             * [HomologyTraitAssn](HomologyTraitAssn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
             * [HomologyTextMining](HomologyTextMining.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
 

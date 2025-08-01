@@ -64,7 +64,7 @@ URI: [motif:HomIntAnn](https://knetminer.com/terms/motifs/motif-categories/HomIn
 
 | property | value |
 | --- | --- |
-| originalCategory | homint::annotation |
+| originalCategories | homint::annotation, HomIntManualAnn |
 
 
 
@@ -100,9 +100,9 @@ URI: [motif:HomIntAnn](https://knetminer.com/terms/motifs/motif-categories/HomIn
 ```yaml
 name: HomIntAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: homint::annotation
+  originalCategories:
+    tag: originalCategories
+    value: homint::annotation, HomIntManualAnn
 description: 'An association that represents a manual annotation based on homology
   and interaction.
 
@@ -124,9 +124,9 @@ mixins:
 ```yaml
 name: HomIntAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: homint::annotation
+  originalCategories:
+    tag: originalCategories
+    value: homint::annotation, HomIntManualAnn
 description: 'An association that represents a manual annotation based on homology
   and interaction.
 

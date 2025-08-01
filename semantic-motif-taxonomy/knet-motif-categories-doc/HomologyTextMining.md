@@ -65,7 +65,7 @@ URI: [motif:HomologyTextMining](https://knetminer.com/terms/motifs/motif-categor
 
 | property | value |
 | --- | --- |
-| originalCategory | phylogeny::homology::literature |
+| originalCategories | phylogeny::homology::literature |
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:HomologyTextMining](https://knetminer.com/terms/motifs/motif-categor
 ```yaml
 name: HomologyTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: phylogeny::homology::literature
 description: 'An association that represents a text mining annotation based on homology.
 
@@ -124,8 +124,8 @@ mixins:
 ```yaml
 name: HomologyTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: phylogeny::homology::literature
 description: 'An association that represents a text mining annotation based on homology.
 

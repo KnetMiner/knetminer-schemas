@@ -65,7 +65,7 @@ URI: [motif:HomoeologyAnn](https://knetminer.com/terms/motifs/motif-categories/H
 
 | property | value |
 | --- | --- |
-| originalCategory | phylogeny::homoeology::annotation |
+| originalCategories | phylogeny::homoeology::annotation, HomoeologyManualAnn |
 
 
 
@@ -101,9 +101,9 @@ URI: [motif:HomoeologyAnn](https://knetminer.com/terms/motifs/motif-categories/H
 ```yaml
 name: HomoeologyAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: phylogeny::homoeology::annotation
+  originalCategories:
+    tag: originalCategories
+    value: phylogeny::homoeology::annotation, HomoeologyManualAnn
 description: 'An association that represents a manual annotation based on homoeology.
 
   '
@@ -124,9 +124,9 @@ mixins:
 ```yaml
 name: HomoeologyAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: phylogeny::homoeology::annotation
+  originalCategories:
+    tag: originalCategories
+    value: phylogeny::homoeology::annotation, HomoeologyManualAnn
 description: 'An association that represents a manual annotation based on homoeology.
 
   '

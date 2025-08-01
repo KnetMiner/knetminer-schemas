@@ -57,9 +57,7 @@ classes:
     notes:
       - "original category no: 1.1"
     annotations:
-      originalCategories:
-      - "direct::annotation"
-      - ManualAnnotation
+      originalCategories: "direct::annotation, ManualAnnotation"
 
   IntraSpeciesTextMiningAnn:
     is_a: IntraSpeciesAnnotation
@@ -72,9 +70,7 @@ classes:
     notes:
       - "original category no: 1.3"
     annotations:
-      originalCategories:
-      - "direct::literature"
-      - TextMiningAnnotation
+      originalCategories: "direct::literature, TextMiningAnnotation"
 
   IntraSpeciesTraitAnn:
     is_a: IntraSpeciesAnnotation
@@ -87,9 +83,7 @@ classes:
     notes:
       - "original category no: 1.2"
     annotations:
-      originalCategories:
-      - "direct::genetics"
-      - IntraTraitAssn
+      originalCategories: "direct::genetics, IntraTraitAssn"
 
 
 
@@ -120,9 +114,7 @@ classes:
     notes:
       - "original category no: 2.6"
     annotations:
-      originalCategories:
-      - "interaction::physical::annotation"
-      - PhysInteractManualAnn
+      originalCategories: "interaction::physical::annotation, PhysInteractManualAnn"
 
   PhysInteractTraitAssn:
     is_a: PhysicalInteraction
@@ -134,8 +126,7 @@ classes:
     notes:
       - "original category no: 2.7"
     annotations:
-      originalCategories:
-      - "interaction::physical::genetics"
+      originalCategories: "interaction::physical::genetics"
 
   PhysInteractTextMining:
     is_a: PhysicalInteraction
@@ -147,8 +138,7 @@ classes:
     notes:
       - "original category no: 2.8"
     annotations:
-      originalCategories:
-      - "interaction::physical::literature"
+      originalCategories: "interaction::physical::literature"
 
   GeneGeneInteraction:
     is_a: BioMolecularInteraction
@@ -168,9 +158,7 @@ classes:
     notes:
       - "original category no: 2.9"
     annotations:
-      originalCategories:
-      - "interaction::genetic::annotation"
-      - GeneIntManualAnn
+      originalCategories: "interaction::genetic::annotation, GeneIntManualAnn"
 
   GeneIntTraitAnn:
     is_a: GeneGeneInteraction
@@ -182,8 +170,7 @@ classes:
     notes:
       - "original category no: 2.10"
     annotations:
-      originalCategories:
-      - "interaction::genetic::genetics"
+      originalCategories: "interaction::genetic::genetics"
 
   GeneIntTextMining:
     is_a: GeneGeneInteraction
@@ -195,8 +182,7 @@ classes:
     notes:
       - "original category no: 2.11"
     annotations:
-      originalCategories:
-      - "interaction::genetic::literature"
+      originalCategories: "interaction::genetic::literature"
 
 
 
@@ -222,8 +208,7 @@ classes:
     notes:
       - "original category no: 2.1"
     annotations:
-      originalCategories:
-      - "expression::differential"
+      originalCategories: "expression::differential"
 
   CoExpression:
     is_a: GeneExpression
@@ -234,8 +219,7 @@ classes:
     notes:
       - "original category no: 2.2"
     annotations:
-      originalCategories:
-      - "expression::coexpression"
+      originalCategories: "expression::coexpression"
 
   ExpressionRegulation:
     is_a: GeneExpression
@@ -255,9 +239,7 @@ classes:
     notes:
       - "original category no: 2.3"
     annotations:
-      originalCategories:
-      - "expression::regulation::annotation"
-      - RegulationManualAnn
+      originalCategories: "expression::regulation::annotation, RegulationManualAnn"
 
   RegulationTraitAssn:
     is_a: ExpressionRegulation
@@ -269,8 +251,7 @@ classes:
     notes:
       - "original category no: 2.4"
     annotations:
-      originalCategories:
-      - "expression::regulation::genetics"
+      originalCategories: "expression::regulation::genetics"
 
   RegulationTextMining:
     is_a: ExpressionRegulation
@@ -282,8 +263,7 @@ classes:
     notes:
       - "original category no: 2.5"
     annotations:
-      originalCategories:
-      - "expression::regulation::literature"
+      originalCategories: "expression::regulation::literature"
 
 
 
@@ -326,9 +306,7 @@ classes:
     notes:
       - "original category no: 3.4"
     annotations:
-      originalCategories:
-      - "phylogeny::homoeology::annotation"
-      - HomoeologyManualAnn
+      originalCategories: "phylogeny::homoeology::annotation, HomoeologyManualAnn"
 
   HomoeologyTraitAssn:
     is_a: Homoeology
@@ -340,8 +318,7 @@ classes:
     notes:
       - "original category no: 3.5"
     annotations:
-      originalCategories:
-      - "phylogeny::homoeology::genetics"
+      originalCategories: "phylogeny::homoeology::genetics"
 
   HomoeologyTextMining:
     is_a: Homoeology
@@ -353,8 +330,7 @@ classes:
     notes:
       - "original category no: 3.6"
     annotations:
-      originalCategories:
-      - "phylogeny::homoeology::literature"
+      originalCategories: "phylogeny::homoeology::literature"
 
 
   Homology:
@@ -378,9 +354,7 @@ classes:
     notes:
       - "original category no: 3.1"
     annotations:
-      originalCategories:
-      - "phylogeny::homology::annotation"
-      - HomologyManualAnn
+      originalCategories: "phylogeny::homology::annotation, HomologyManualAnn"
 
   HomologyTraitAssn:
     is_a: Homology
@@ -392,8 +366,7 @@ classes:
     notes:
       - "original category no: 3.2"
     annotations:
-      originalCategories:
-      - "phylogeny::homology::genetics"
+      originalCategories: "phylogeny::homology::genetics"
 
   HomologyTextMining:
     is_a: Homology
@@ -405,8 +378,7 @@ classes:
     notes:
       - "original category no: 3.3"
     annotations:
-      originalCategories:
-      - "phylogeny::homology::literature"
+      originalCategories: "phylogeny::homology::literature"
 
 
   SequenceSimilarity:
@@ -429,9 +401,7 @@ classes:
     notes:
       - "original category no: 4.1"
     annotations:
-      originalCategories:
-      - "phylogeny::similarity::annotation"
-      - SeqSimManualAnn
+      originalCategories: "phylogeny::similarity::annotation, SeqSimManualAnn"
 
   SeqSimTextMining:
     is_a: SequenceSimilarity
@@ -443,8 +413,7 @@ classes:
     notes:
       - "original category no: 4.2"
     annotations:
-      originalCategories:
-      - "phylogeny::similarity::literature"
+      originalCategories: "phylogeny::similarity::literature"
 
 
 
@@ -470,9 +439,7 @@ classes:
     notes:
       - "original category no: 5.1"
     annotations:
-      originalCategories:
-      - "homint::annotation"
-      - HomIntManualAnn
+      originalCategories: "homint::annotation, HomIntManualAnn"
 
   HomIntTraitAssn:
     is_a: HomologyInteraction
@@ -484,8 +451,7 @@ classes:
     notes:
       - "original category no: 5.2"
     annotations:
-      originalCategories:
-      - "homint::genetics"
+      originalCategories: "homint::genetics"
 
   HomIntTextMining:
     is_a: HomologyInteraction
@@ -497,8 +463,7 @@ classes:
     notes:
       - "original category no: 5.3"
     annotations:
-      originalCategories:
-      - "homint::literature"
+      originalCategories: "homint::literature"
 
 
 

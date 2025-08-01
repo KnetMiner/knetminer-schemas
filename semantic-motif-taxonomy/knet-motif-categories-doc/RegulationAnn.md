@@ -65,7 +65,7 @@ URI: [motif:RegulationAnn](https://knetminer.com/terms/motifs/motif-categories/R
 
 | property | value |
 | --- | --- |
-| originalCategory | expression::regulation::annotation |
+| originalCategories | expression::regulation::annotation, RegulationManualAnn |
 
 
 
@@ -101,9 +101,9 @@ URI: [motif:RegulationAnn](https://knetminer.com/terms/motifs/motif-categories/R
 ```yaml
 name: RegulationAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: expression::regulation::annotation
+  originalCategories:
+    tag: originalCategories
+    value: expression::regulation::annotation, RegulationManualAnn
 description: "A curated annotation based on gene expression regulation. \n"
 title: Expression Regulation Annotation
 notes:
@@ -122,9 +122,9 @@ mixins:
 ```yaml
 name: RegulationAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: expression::regulation::annotation
+  originalCategories:
+    tag: originalCategories
+    value: expression::regulation::annotation, RegulationManualAnn
 description: "A curated annotation based on gene expression regulation. \n"
 title: Expression Regulation Annotation
 notes:

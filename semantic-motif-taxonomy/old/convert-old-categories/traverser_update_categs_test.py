@@ -34,14 +34,12 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
           classes:
             CoExpression:
               annotations:
-                originalCategories:
-                  - "expression::coexpression"
+                originalCategories: "expression::coexpression"
               description: "Co-expression relationship"
             
             GeneOntology:
               annotations:
-                originalCategories:
-                  - "ontology::go"
+                originalCategories: "ontology::go"
               description: "Gene Ontology term"
             
             RegularClass:
@@ -94,9 +92,7 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
           classes:
             CoExpression:
               annotations:
-                originalCategories:
-                  - "expression::coexpression"
-                  - "expression::coexpression"
+                originalCategories: "expression::coexpression, expression::coexpression"
               description: "Co-expression relationship"
           """
         
@@ -113,14 +109,12 @@ class TestExtractOriginalCategoryMapping(unittest.TestCase):
           classes:
             CoExpression:
               annotations:
-                originalCategories:
-                  - "expression::coexpression"
+                originalCategories: "expression::coexpression"
               description: "Co-expression relationship"
             
             AnotherClass:
               annotations:
-                originalCategories:
-                  - "expression::coexpression"
+                originalCategories: "expression::coexpression"
               description: "Another class with same originalCategories"
           """
         

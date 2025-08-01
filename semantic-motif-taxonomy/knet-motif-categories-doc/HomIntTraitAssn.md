@@ -64,7 +64,7 @@ URI: [motif:HomIntTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 
 | property | value |
 | --- | --- |
-| originalCategory | homint::genetics |
+| originalCategories | homint::genetics |
 
 
 
@@ -100,8 +100,8 @@ URI: [motif:HomIntTraitAssn](https://knetminer.com/terms/motifs/motif-categories
 ```yaml
 name: HomIntTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: homint::genetics
 description: 'A gene-to-trait association based on homology.
 
@@ -123,8 +123,8 @@ mixins:
 ```yaml
 name: HomIntTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: homint::genetics
 description: 'A gene-to-trait association based on homology.
 

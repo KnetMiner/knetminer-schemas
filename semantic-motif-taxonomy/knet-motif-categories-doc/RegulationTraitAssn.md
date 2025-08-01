@@ -65,7 +65,7 @@ URI: [motif:RegulationTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 
 | property | value |
 | --- | --- |
-| originalCategory | expression::regulation::genetics |
+| originalCategories | expression::regulation::genetics |
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:RegulationTraitAssn](https://knetminer.com/terms/motifs/motif-catego
 ```yaml
 name: RegulationTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: expression::regulation::genetics
 description: 'A gene-to-trait association based on gene expression regulation.
 
@@ -124,8 +124,8 @@ mixins:
 ```yaml
 name: RegulationTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: expression::regulation::genetics
 description: 'A gene-to-trait association based on gene expression regulation.
 

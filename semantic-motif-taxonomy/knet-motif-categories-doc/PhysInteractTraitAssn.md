@@ -65,7 +65,7 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
 
 | property | value |
 | --- | --- |
-| originalCategory | interaction::physical::genetics |
+| originalCategories | interaction::physical::genetics |
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:PhysInteractTraitAssn](https://knetminer.com/terms/motifs/motif-cate
 ```yaml
 name: PhysInteractTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: interaction::physical::genetics
 description: 'A gene-to-trait association based on physical interaction.
 
@@ -124,8 +124,8 @@ mixins:
 ```yaml
 name: PhysInteractTraitAssn
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: interaction::physical::genetics
 description: 'A gene-to-trait association based on physical interaction.
 

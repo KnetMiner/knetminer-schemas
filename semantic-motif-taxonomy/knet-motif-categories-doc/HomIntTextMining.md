@@ -64,7 +64,7 @@ URI: [motif:HomIntTextMining](https://knetminer.com/terms/motifs/motif-categorie
 
 | property | value |
 | --- | --- |
-| originalCategory | homint::literature |
+| originalCategories | homint::literature |
 
 
 
@@ -100,8 +100,8 @@ URI: [motif:HomIntTextMining](https://knetminer.com/terms/motifs/motif-categorie
 ```yaml
 name: HomIntTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: homint::literature
 description: 'An association that represents a text mining annotation based on homology
   and interaction.
@@ -124,8 +124,8 @@ mixins:
 ```yaml
 name: HomIntTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: homint::literature
 description: 'An association that represents a text mining annotation based on homology
   and interaction.

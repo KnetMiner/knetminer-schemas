@@ -32,12 +32,12 @@ URI: [motif:IntraSpeciesAnnotation](https://knetminer.com/terms/motifs/motif-cat
         click SemanticMotifCategory href "../SemanticMotifCategory"
       
 
-      IntraSpeciesAnnotation <|-- CuratedAnn
-        click CuratedAnn href "../CuratedAnn"
+      IntraSpeciesAnnotation <|-- InstraSpeciesCuratedAnn
+        click InstraSpeciesCuratedAnn href "../InstraSpeciesCuratedAnn"
       IntraSpeciesAnnotation <|-- IntraSpeciesTextMiningAnn
         click IntraSpeciesTextMiningAnn href "../IntraSpeciesTextMiningAnn"
-      IntraSpeciesAnnotation <|-- IntraTraitAnn
-        click IntraTraitAnn href "../IntraTraitAnn"
+      IntraSpeciesAnnotation <|-- IntraSpeciesTraitAnn
+        click IntraSpeciesTraitAnn href "../IntraSpeciesTraitAnn"
       
       
       
@@ -50,9 +50,9 @@ URI: [motif:IntraSpeciesAnnotation](https://knetminer.com/terms/motifs/motif-cat
 ## Inheritance
 * [SemanticMotifCategory](SemanticMotifCategory.md)
     * **IntraSpeciesAnnotation** [ [IntraSpeciesAssociation](IntraSpeciesAssociation.md)]
-        * [CuratedAnn](CuratedAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
+        * [InstraSpeciesCuratedAnn](InstraSpeciesCuratedAnn.md) [ [HasCuratedAnnotation](HasCuratedAnnotation.md)]
         * [IntraSpeciesTextMiningAnn](IntraSpeciesTextMiningAnn.md) [ [HasTextMiningAnnotation](HasTextMiningAnnotation.md)]
-        * [IntraTraitAnn](IntraTraitAnn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
+        * [IntraSpeciesTraitAnn](IntraSpeciesTraitAnn.md) [ [HasGeneTraitAssociation](HasGeneTraitAssociation.md)]
 
 
 

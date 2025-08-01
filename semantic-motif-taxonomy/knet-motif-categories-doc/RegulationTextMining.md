@@ -65,7 +65,7 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 
 | property | value |
 | --- | --- |
-| originalCategory | expression::regulation::literature |
+| originalCategories | expression::regulation::literature |
 
 
 
@@ -101,8 +101,8 @@ URI: [motif:RegulationTextMining](https://knetminer.com/terms/motifs/motif-categ
 ```yaml
 name: RegulationTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: expression::regulation::literature
 description: 'An association that represents a text mining annotation based on gene
   expression regulation.
@@ -125,8 +125,8 @@ mixins:
 ```yaml
 name: RegulationTextMining
 annotations:
-  originalCategory:
-    tag: originalCategory
+  originalCategories:
+    tag: originalCategories
     value: expression::regulation::literature
 description: 'An association that represents a text mining annotation based on gene
   expression regulation.

@@ -66,7 +66,7 @@ URI: [motif:IntraSpeciesTextMiningAnn](https://knetminer.com/terms/motifs/motif-
 
 | property | value |
 | --- | --- |
-| originalCategory | direct::literature |
+| originalCategories | direct::literature, TextMiningAnnotation |
 
 
 
@@ -102,9 +102,9 @@ URI: [motif:IntraSpeciesTextMiningAnn](https://knetminer.com/terms/motifs/motif-
 ```yaml
 name: IntraSpeciesTextMiningAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: direct::literature
+  originalCategories:
+    tag: originalCategories
+    value: direct::literature, TextMiningAnnotation
 description: "An intra-species association that was computed via text mining methods,\
   \ such as name-entity \nrecognition, semantic similarity or LLM-based embeddings.\n"
 title: Text Mining Annotation
@@ -124,9 +124,9 @@ mixins:
 ```yaml
 name: IntraSpeciesTextMiningAnn
 annotations:
-  originalCategory:
-    tag: originalCategory
-    value: direct::literature
+  originalCategories:
+    tag: originalCategories
+    value: direct::literature, TextMiningAnnotation
 description: "An intra-species association that was computed via text mining methods,\
   \ such as name-entity \nrecognition, semantic similarity or LLM-based embeddings.\n"
 title: Text Mining Annotation
