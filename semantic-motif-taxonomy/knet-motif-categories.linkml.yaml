@@ -273,12 +273,11 @@ classes:
   PhylogenyConfidentAssociation:
     is_a: SemanticMotifCategory
     description: |
-      Associations in this category are considered to have good confidence and are related to 
-      phylogenetic relationships, such as homoeology, homology or other evolutionary 
-      relationships between genes or species.
-
-      The Homology Interaction category is excluded from this branch, since those kind of 
-      associations are based on cross-species similarity and considered speculative. 
+      This category includes confident associations based on phylogenetic relationships, 
+      such as homoeology, homology, or other evolutionary links between genes or species.
+      
+      The Homology Interaction category is excluded, as those associations are cross-species 
+      and considered speculative.
     title: Sequence-Based
 
   Homoeology:
