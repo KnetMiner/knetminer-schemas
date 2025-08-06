@@ -28,7 +28,7 @@ function build_semantic-motif-taxonomy
 	printf "\n== Markdown Docs\n"
 	doc_dir=knet-motif-categories-doc
 	rm -Rf "$doc_dir"
-	linkml generate doc --hierarchical-class-view --directory "$doc_dir" \
+	linkml generate doc --hierarchical-class-view --directory "$doc_dir" --index-name README\
 	  knet-motif-categories.linkml.yaml
 
 	git add "$doc_dir"
