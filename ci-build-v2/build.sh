@@ -44,7 +44,13 @@ function stage_deploy_local
 	is_deploy_mode || return 0
 
 	printf "== Updating local changes to git\n"
-	git commit -a --allow-empty -m "Updating auto-generated files from CI $CI_SKIP_TAG"
+
+	if ! $(git status --porcelain); then
+		printf "= No changes happened in the build (same files commited?), skipping git update"
+		return 0
+	fi
+
+	git commit -a -m "Updating auto-generated files from CI $CI_SKIP_TAG"
 	export CI_NEEDS_PUSH=true
 }
 
