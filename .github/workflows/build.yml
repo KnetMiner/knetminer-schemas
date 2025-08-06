@@ -1,0 +1,50 @@
+name: Standard Build
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      # Set BOTH when you want to trigger a new release. The build script will 
+      # switch Maven to the new release, deploy, tag git, move Maven to the new snapshot
+      NEW_RELEASE_VER:
+        description: "New Release Version"
+        required: false
+      NEW_SNAPSHOT_VER:
+        description: "New Snapshot Version"
+        required: false  
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Code checkout
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        cache: pip
+        check-latest: true
+        cache-dependency-path: |
+          **/requirements.txt
+
+    - name: Build
+      env:
+        GIT_USER: ${{github.actor}}
+        GIT_PASSWORD: ${{github.GITHUB_TOKEN}}
+        GIT_USER_EMAIL: ${{secrets.GIT_USER_EMAIL}}
+        CI_SLACK_API_NOTIFICATION_URL: ${{secrets.CI_SLACK_API_NOTIFICATION_URL}}
+        CI_NEW_RELEASE_VER: ${{github.event.inputs.NEW_RELEASE_VER}}
+        CI_NEW_SNAPSHOT_VER: ${{github.event.inputs.NEW_SNAPSHOT_VER}}
+        # You might need it to let the CI scripts decide upon schedule vs push
+        CI_TRIGGERING_EVENT: ${{github.event_name}}
+        # This is only set when using the act tool
+        CI_IS_ACT_TOOL: ${{ secrets.CI_IS_ACT_TOOL }}
+        # This also can be passed from act CLI
+        CI_DEPLOY_BRANCHES: ${{ secrets.CI_DEPLOY_BRANCHES }}
+        
+      run: ci-build-v2/build.sh
+      
