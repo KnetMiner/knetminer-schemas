@@ -3,9 +3,9 @@ set -e
 
 function stage_build_setup_local
 {
-	printf "== Installing Python environment and requirements"
+	printf "== Installing Python environment and requirements\n"
 	python -m venv pyenv
-	./pyenv/bin/activate
+	. ./pyenv/bin/activate
 
 	pip install -r requirements.txt
 }
@@ -30,6 +30,8 @@ function build_semantic-motif-taxonomy
 	rm -Rf "$doc_dir"
 	linkml generate doc --hierarchical-class-view --directory "$doc_dir" \
 	  knet-motif-categories.linkml.yaml
+
+	git add "$doc_dir"
 
 	cd ..
 	printf "\n== /end: Processing Semantic Motif Taxonomy\n"
