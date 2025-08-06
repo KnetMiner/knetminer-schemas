@@ -45,7 +45,7 @@ function stage_deploy_local
 
 	printf "== Updating local changes to git\n"
 
-	if ! $(git status --porcelain); then
+	if [[ ! $(git status --porcelain) ]]; then
 		printf "= No changes happened in the build (same files commited?), skipping git update"
 		return 0
 	fi
