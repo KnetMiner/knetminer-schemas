@@ -3,17 +3,15 @@
 # Class: Sequence-Based (PhylogenyConfidentAssociation) 
 
 
-_Associations in this category are considered to have good confidence and are related to _
+_This category includes confident associations based on phylogenetic relationships, _
 
-_phylogenetic relationships, such as homoeology, homology or other evolutionary _
-
-_relationships between genes or species._
+_such as homoeology, homology, or other evolutionary links between genes or species._
 
 __
 
-_The Homology Interaction category is excluded from this branch, since those kind of _
+_The Homology Interaction category is excluded, as those associations are cross-species _
 
-_associations are based on cross-species similarity and considered speculative. _
+_and considered speculative._
 
 __
 
@@ -111,11 +109,10 @@ URI: [motif:PhylogenyConfidentAssociation](https://knetminer.com/terms/motifs/mo
 <details>
 ```yaml
 name: PhylogenyConfidentAssociation
-description: "Associations in this category are considered to have good confidence\
-  \ and are related to \nphylogenetic relationships, such as homoeology, homology\
-  \ or other evolutionary \nrelationships between genes or species.\n\nThe Homology\
-  \ Interaction category is excluded from this branch, since those kind of \nassociations\
-  \ are based on cross-species similarity and considered speculative. \n"
+description: "This category includes confident associations based on phylogenetic\
+  \ relationships, \nsuch as homoeology, homology, or other evolutionary links between\
+  \ genes or species.\n\nThe Homology Interaction category is excluded, as those associations\
+  \ are cross-species \nand considered speculative.\n"
 title: Sequence-Based
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SemanticMotifCategory
@@ -128,11 +125,10 @@ is_a: SemanticMotifCategory
 <details>
 ```yaml
 name: PhylogenyConfidentAssociation
-description: "Associations in this category are considered to have good confidence\
-  \ and are related to \nphylogenetic relationships, such as homoeology, homology\
-  \ or other evolutionary \nrelationships between genes or species.\n\nThe Homology\
-  \ Interaction category is excluded from this branch, since those kind of \nassociations\
-  \ are based on cross-species similarity and considered speculative. \n"
+description: "This category includes confident associations based on phylogenetic\
+  \ relationships, \nsuch as homoeology, homology, or other evolutionary links between\
+  \ genes or species.\n\nThe Homology Interaction category is excluded, as those associations\
+  \ are cross-species \nand considered speculative.\n"
 title: Sequence-Based
 from_schema: https://knetminer.com/terms/motifs/motif-categories/schema
 is_a: SemanticMotifCategory
