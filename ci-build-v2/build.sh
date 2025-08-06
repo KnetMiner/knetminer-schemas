@@ -19,13 +19,13 @@ function stage_build_local
 
 function build_semantic-motif-taxonomy
 {
-	printf "== Processing Semantic Motif Taxonomy\n"
+	printf "=== Processing Semantic Motif Taxonomy\n"
 	cd semantic-motif-taxonomy
 
-	printf "=== Validation\n"
+	printf "== Validation\n"
 	linkml lint knet-motif-categories.linkml.yaml
 
-	printf "\n=== Markdown Docs\n"
+	printf "\n== Markdown Docs\n"
 	doc_dir=knet-motif-categories-doc
 	rm -Rf "$doc_dir"
 	linkml generate doc --hierarchical-class-view --directory "$doc_dir" \
@@ -34,7 +34,7 @@ function build_semantic-motif-taxonomy
 	git add "$doc_dir"
 
 	cd ..
-	printf "\n== /end: Processing Semantic Motif Taxonomy\n"
+	printf "\n=== /end: Processing Semantic Motif Taxonomy\n"
 }
 
 
