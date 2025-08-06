@@ -212,3 +212,4 @@ __marimo__/
 mynotes.md
 /linkml-env
 /pyenv
+/ci-build-v2/_common.sh
