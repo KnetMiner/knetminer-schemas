@@ -44,6 +44,9 @@ jobs:
         CI_TRIGGERING_EVENT: ${{github.event_name}}
         # This is only set when using the act tool
         CI_IS_ACT_TOOL: ${{ secrets.CI_IS_ACT_TOOL }}
+        # ACT CAN'T get this from github.GITHUB_TOKEN, so we have code that
+        # re-routes this to GIT_PASSWORD
+        ACT_GIT_PASSWORD: ${{secrets.GITHUB_PAT}}
         # This also can be passed from act CLI
         CI_DEPLOY_BRANCHES: ${{ secrets.CI_DEPLOY_BRANCHES }}
         

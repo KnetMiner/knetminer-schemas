@@ -19,12 +19,16 @@ function switch_motif_taxonomy_version
 	printf "== Switching Semantic Motif Taxonomy version to '$version'\n"
 
 	cd semantic-motif-taxonomy
-	sed --in-place -E "s/^version: (.+)\$/$version/" "${CI_SEMANTIC_MOTIF_LINKML_NAME}"
+	sed --in-place -E "s/^version: (.+)\$/version: $version/" "${CI_SEMANTIC_MOTIF_LINKML_NAME}"
+
+	cd ..
 }
 
 
 function stage_init_release_local
 {
+	is_release_mode || return 0
+
 	switch_motif_taxonomy_version "${CI_NEW_RELEASE_VER}"
 }
 
@@ -111,6 +115,7 @@ function install_and_import
 
 	# Eventually, these should be here.
 	. ./ci-build-v2/_common.sh	
+
 
 	# WARNING: the best way to override functions defined in these imported files is 
 	# doing it in your own definition file and then importing it after the original ones, like
