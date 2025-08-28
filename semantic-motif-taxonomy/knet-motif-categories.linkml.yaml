@@ -3,7 +3,7 @@ name: KnetMotifCategories
 description: |
   A classification of semantic motif categories that KnetMiner uses to qualify semantic motif paths,
   gene/concept links that are found by semantic motif paths and anything similar or related to that.
-version: 1.0-SNAPSHOT
+version: 1.0
 
 notes:
   - |
