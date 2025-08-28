@@ -35,7 +35,8 @@ jobs:
     - name: Build
       env:
         GIT_USER: ${{github.actor}}
-        GIT_PASSWORD: ${{github.GITHUB_TOKEN}}
+        # GIT_PASSWORD: ${{github.GITHUB_TOKEN}}
+        GIT_PASSWORD: ${{secrets.GITHUB_PAT}} # For the act tool
         GIT_USER_EMAIL: ${{secrets.GIT_USER_EMAIL}}
         CI_SLACK_API_NOTIFICATION_URL: ${{secrets.CI_SLACK_API_NOTIFICATION_URL}}
         CI_NEW_RELEASE_VER: ${{github.event.inputs.NEW_RELEASE_VER}}
