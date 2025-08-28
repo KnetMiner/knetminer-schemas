@@ -8,8 +8,25 @@ function stage_build_setup_local
 	. ./pyenv/bin/activate
 
 	pip install -r requirements.txt
+
+	export CI_SEMANTIC_MOTIF_LINKML_NAME='knet-motif-categories.linkml.yaml'
 }
 
+
+function switch_motif_taxonomy_version
+{
+	local version="$1"
+	printf "== Switching Semantic Motif Taxonomy version to '$version'\n"
+
+	cd semantic-motif-taxonomy
+	sed --in-place -E "s/^version: (.+)\$/$version/" "${CI_SEMANTIC_MOTIF_LINKML_NAME}"
+}
+
+
+function stage_init_release_local
+{
+	switch_motif_taxonomy_version "${CI_NEW_RELEASE_VER}"
+}
 
 
 function stage_build_local
@@ -20,16 +37,17 @@ function stage_build_local
 function build_semantic-motif-taxonomy
 {
 	printf "=== Processing Semantic Motif Taxonomy\n"
+
 	cd semantic-motif-taxonomy
 
 	printf "== Validation\n"
-	linkml lint knet-motif-categories.linkml.yaml
+	linkml lint "${CI_SEMANTIC_MOTIF_LINKML_NAME}"
 
 	printf "\n== Markdown Docs\n"
 	doc_dir=knet-motif-categories-doc
 	rm -Rf "$doc_dir"
 	linkml generate doc --hierarchical-class-view --directory "$doc_dir" --index-name README\
-	  knet-motif-categories.linkml.yaml
+	  "${CI_SEMANTIC_MOTIF_LINKML_NAME}"
 
 	git add "$doc_dir"
 
@@ -53,6 +71,18 @@ function stage_deploy_local
 	git commit -a -m "Updating auto-generated files from CI $CI_SKIP_TAG"
 	export CI_NEEDS_PUSH=true
 }
+
+
+function stage_release_local
+{
+	is_release_mode || return 0
+		
+	release_commit_and_tag
+	switch_motif_taxonomy_version "${CI_NEW_SNAPSHOT_VER}"
+	release_commit_new_snapshot
+	# CI_NEEDS_PUSH was set	
+}
+
 
 
 
